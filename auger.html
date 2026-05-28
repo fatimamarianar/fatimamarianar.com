@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auger-based extrusion subsystem — Fatima Ramirez</title>
+<meta name="description" content="Designing a modular auger printhead for construction 3D printing — MSc research project by Fatima Ramirez.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,800;1,300;1,800&family=Inter+Tight:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/project.css">
+</head>
+
+<body class="theme-light" data-i18n-title="meta.title_auger">
+
+<!-- Header strip -->
+<div class="header-strip">
+  <span class="dots">● ● ●</span>
+  <span class="center" data-i18n="header_strip.center">fatima_ramirez / portfolio.2026</span>
+  <span class="right" data-i18n="header_strip.right">v.01</span>
+</div>
+
+<!-- Navigation -->
+<nav class="nav" aria-label="Primary">
+  <ul>
+    <li><a href="index.html" data-i18n="nav.index">01 Index</a></li>
+    <li><a href="index.html#work" class="current" data-i18n="nav.work">02 Work</a></li>
+    <li><a href="index.html#about" data-i18n="nav.about">03 About</a></li>
+    <li><a href="index.html#contact" data-i18n="nav.contact">04 Contact</a></li>
+    <li class="lang-toggle" aria-label="Language toggle">
+      <button data-lang-btn="en" class="active" aria-pressed="true">EN</button>
+      <button data-lang-btn="es" aria-pressed="false">ES</button>
+    </li>
+  </ul>
+</nav>
+
+<main class="project-page">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html#work" data-i18n="auger.breadcrumb_work">Work</a>
+    <span class="sep">/</span>
+    <span class="current" data-i18n="auger.breadcrumb_current">Auger printhead</span>
+  </div>
+
+  <!-- Title block -->
+  <div class="tag-flag" data-i18n="auger.tag">Project 01 · MSc Research</div>
+
+  <h1 class="pp-title">
+    <span data-i18n="auger.title_main">Auger-based</span><br>
+    <em data-i18n="auger.title_em">extrusion subsystem</em><br>
+    <span data-i18n="auger.title_sub" style="font-size: 0.55em; opacity: 0.85;">for construction 3D printing</span>
+  </h1>
+
+  <p class="pp-subtitle" data-i18n="auger.subtitle">
+    Designing a modular printhead to extrude cement-based materials at construction scale.
+  </p>
+
+  <!-- Hero media -->
+  <div class="pp-hero-media">
+    <span class="corner-label" data-i18n="auger.hero_corner">01 / Hero</span>
+    <div class="placeholder">
+      <span data-i18n="auger.hero_placeholder">PRINTHEAD ASSEMBLED ON GANTRY</span>
+      <span class="small" data-i18n="auger.hero_placeholder_small">/assets/images/auger-hero.jpg</span>
+    </div>
+  </div>
+
+  <!-- Spec sheet -->
+  <div class="pp-spec">
+    <div class="row">
+      <span class="k" data-i18n="auger.spec_k_year">year</span>
+      <span class="v" data-i18n="auger.spec_v_year">2023 – 2026</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="auger.spec_k_role">role</span>
+      <span class="v" data-i18n="auger.spec_v_role">Lead Mechatronics Engineer · MSc Research</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="auger.spec_k_team">team</span>
+      <span class="v" data-i18n="auger.spec_v_team">Solo design + coordination of up to 3 collaborators per cycle</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="auger.spec_k_stack">stack</span>
+      <span class="v" data-i18n="auger.spec_v_stack">SolidWorks · custom PCB · Duet 3 firmware · G-code</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="auger.spec_k_status">status</span>
+      <span class="v accent" data-i18n="auger.spec_v_status">Prototype validated · accepted at IMECE 2026</span>
+    </div>
+  </div>
+
+  <!-- ===== 01 CONTEXT ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="auger.section_context_num">01</span> · <span data-i18n="auger.section_context_label">Context</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="auger.h3_context">Why this matters</h3>
+  <p class="pp-body" data-i18n="auger.context_p1">
+    3D printing for construction is a young field. The lab where I worked had an existing mid-scale gantry printer with a piston-based extruder — a syringe pushing paste through a nozzle. It worked, but had three persistent operational bottlenecks:
+  </p>
+  <ul class="pp-list">
+    <li data-i18n="auger.context_li1">Cleanup is brutal — cement hardens fast; piston disassembly and cleaning take a long time</li>
+    <li data-i18n="auger.context_li2">Reload is manual — each print needs full pre-mixing, loading, and pressurizing</li>
+    <li data-i18n="auger.context_li3">Reconfigurability is poor — changing nozzle, scale, or material often means rebuilding the extruder</li>
+  </ul>
+  <p class="pp-body" data-i18n="auger.context_p2">
+    My task: design a replacement printhead that reduces these frictions, integrates with the existing control architecture, and remains reconfigurable for future material and scale experiments.
+  </p>
+
+  <!-- ===== 02 APPROACH ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="auger.section_approach_num">02</span> · <span data-i18n="auger.section_approach_label">Approach</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="auger.h3_approach">How I solved it</h3>
+  <p class="pp-body" data-i18n="auger.approach_intro">
+    Chose an auger-based mechanism: a rotating screw pushes material continuously through an exchangeable nozzle, replacing the discrete batch-and-push behavior of a piston.
+  </p>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.2rem;" data-i18n="auger.approach_h4_why">Why auger over piston</h4>
+  <ul class="pp-list">
+    <li data-i18n="auger.approach_why_li1">Continuous extrusion — no mid-print reload pauses</li>
+    <li data-i18n="auger.approach_why_li2">Faster cleanup — the screw can self-purge by spinning</li>
+    <li data-i18n="auger.approach_why_li3">Mechanically simpler wetted path — fewer seals, less friction</li>
+  </ul>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.5rem;" data-i18n="auger.approach_h4_domains">Multi-domain ownership</h4>
+  <p class="pp-body" data-i18n="auger.approach_intro_domains">
+    The printhead required end-to-end work across four domains, all of which I owned:
+  </p>
+
+  <table class="pp-table">
+    <tr>
+      <th data-i18n="auger.tbl_dom_1">Mechanical design</th>
+      <td data-i18n="auger.tbl_dom_1_desc">Sized auger geometry by adapting polymer-extrusion drag-pressure models to cement-based materials. Designed a modular system: separable actuation module and wetted module, with quick-release interfaces.</td>
+    </tr>
+    <tr>
+      <th data-i18n="auger.tbl_dom_2">Drive train</th>
+      <td data-i18n="auger.tbl_dom_2_desc">Selected a 400 W DC servo (1.27 Nm rated, IP65, integrated brake), 50:1 NEMA 34 gearbox, flexible coupling, and drill chuck with Jacobs taper for tool modularity.</td>
+    </tr>
+    <tr>
+      <th data-i18n="auger.tbl_dom_3">Electronics</th>
+      <td data-i18n="auger.tbl_dom_3_desc">Custom PCB for servo driver digital I/O. Integrated 48V/600W power supply, regenerative braking resistor, and power relay into the existing Duet 3 control box.</td>
+    </tr>
+    <tr>
+      <th data-i18n="auger.tbl_dom_4">Firmware</th>
+      <td data-i18n="auger.tbl_dom_4_desc">Configured Servo Tuning Software, updated config.g on the Duet 3, implemented PULSE/DIR control through G-code, documented future MODBUS roadmap.</td>
+    </tr>
+  </table>
+
+  <!-- Inverted diagram block (dark inside light page) -->
+  <div class="pp-diagram">
+    <div class="diagram-area">
+      <span class="placeholder" data-i18n="auger.approach_diag_placeholder">ARCHITECTURE DIAGRAM</span>
+    </div>
+    <div class="diagram-caption">
+      <span data-i18n="auger.approach_diag_caption_left">fig.01 — auger printhead system</span>
+      <span class="acc" data-i18n="auger.approach_diag_caption_right">mech · elec · firmware</span>
+    </div>
+  </div>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.5rem;" data-i18n="auger.approach_h4_tradeoffs">Key trade-offs evaluated</h4>
+  <ul class="pp-list">
+    <li data-i18n="auger.approach_tradeoffs_li1">Auger vs. piston extrusion</li>
+    <li data-i18n="auger.approach_tradeoffs_li2">Stepper vs. DC servo vs. BLDC motor</li>
+    <li data-i18n="auger.approach_tradeoffs_li3">Outlet diameter vs. aggregate size</li>
+    <li data-i18n="auger.approach_tradeoffs_li4">Modularity vs. fastener count</li>
+  </ul>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.5rem;" data-i18n="auger.approach_h4_validation">Validation framework</h4>
+  <p class="pp-body" data-i18n="auger.approach_validation">
+    Derived 9 formal design requirements from prior system bottlenecks and literature. Each requirement was validated through inspection, analysis, dry test, or material test.
+  </p>
+
+  <!-- ===== 03 RESULT ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="auger.section_result_num">03</span> · <span data-i18n="auger.section_result_label">Result</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="auger.h3_result">What it achieved</h3>
+  <p class="pp-body" data-i18n="auger.result_intro">
+    Tested against cement-based premixes with up to 2 mm aggregates (Sand Mix, Mortar Mix variants), printing straight-line, multi-layer test prints (2–3 layers stacked).
+  </p>
+
+  <!-- Callout 1 -->
+  <div class="pp-result">
+    <div class="label" data-i18n="auger.result_callout1_label">Cleanup time</div>
+    <div class="stat" data-i18n="auger.result_callout1_stat">Significant reduction vs. piston</div>
+    <div class="desc" data-i18n="auger.result_callout1_desc">
+      Embargoed metrics will be released after the IMECE 2026 publication.
+    </div>
+  </div>
+
+  <!-- Callout 2 -->
+  <div class="pp-result">
+    <div class="label" data-i18n="auger.result_callout2_label">Drive train torque</div>
+    <div class="stat" data-i18n="auger.result_callout2_stat">Matched analytical model</div>
+    <div class="desc" data-i18n="auger.result_callout2_desc">
+      Field measurements corroborated preliminary estimates from the adapted polymer-extrusion model.
+    </div>
+  </div>
+
+  <!-- Video placeholder -->
+  <div class="pp-video">
+    <span class="vid-meta" data-i18n="auger.result_video_meta">01:24 · MP4</span>
+    <div class="play" aria-label="Play video"></div>
+  </div>
+  <p style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; margin-top: -0.5rem; margin-bottom: 1.2rem;" data-i18n="auger.result_video_placeholder">
+    Video — Printhead extruding mortar mix
+  </p>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.4rem;" data-i18n="auger.result_h4_limitations">Limitations identified for future iteration</h4>
+  <ul class="pp-list">
+    <li data-i18n="auger.result_limit_li1">Hopper feeding behavior needs refinement (occasional bridging)</li>
+    <li data-i18n="auger.result_limit_li2">Drill chuck loosened under high-resistance conditions — future versions need a more robust tool interface</li>
+    <li data-i18n="auger.result_limit_li3">Initial nozzle geometry failed during testing; alternate geometries were fabricated overnight to recover the test cycle</li>
+  </ul>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.4rem;" data-i18n="auger.result_h4_published">Published</h4>
+  <p class="pp-body" style="margin-bottom: 0.4rem;" data-i18n="auger.result_pub_main">IMECE 2026 · ASME, Vancouver — accepted</p>
+  <p style="font-family: var(--font-mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.7; margin-bottom: 0.4rem;" data-i18n="auger.result_pub_related_label">Related work</p>
+  <ul class="pp-list" style="font-size: 0.85rem;">
+    <li data-i18n="auger.result_pub_related_1">State-of-the-art review · Construction Robotics (2025)</li>
+    <li data-i18n="auger.result_pub_related_2">Performance assessment of the predecessor piston printer · Construction Robotics (under review)</li>
+  </ul>
+
+  <!-- ===== 04 GALLERY ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="auger.section_gallery_num">04</span> · <span data-i18n="auger.section_gallery_label">Gallery</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="auger.h3_gallery">Process & details</h3>
+
+  <div class="pp-gallery">
+    <div class="thumb thumb-a">
+      <span class="caption" data-i18n="auger.gallery_a_caption">01 · CAD</span>
+      <span class="placeholder" data-i18n="auger.gallery_a_placeholder">CAD render</span>
+    </div>
+    <div class="thumb thumb-b">
+      <span class="caption" data-i18n="auger.gallery_b_caption">02 · PCB</span>
+      <span class="placeholder" data-i18n="auger.gallery_b_placeholder">Custom PCB</span>
+    </div>
+    <div class="thumb thumb-c">
+      <span class="caption" data-i18n="auger.gallery_c_caption">03 · Setup</span>
+      <span class="placeholder" data-i18n="auger.gallery_c_placeholder">Lab setup</span>
+    </div>
+    <div class="thumb thumb-d">
+      <span class="caption" data-i18n="auger.gallery_d_caption">04 · Output</span>
+      <span class="placeholder" data-i18n="auger.gallery_d_placeholder">Printed lines</span>
+    </div>
+  </div>
+
+  <!-- Next project -->
+  <a class="pp-nav-next" href="#" aria-disabled="true">
+    <span class="label" data-i18n="auger.next_label">Next project →</span>
+    <h5 data-i18n="auger.next_title">EDAPI</h5>
+    <span class="arrow">→</span>
+    <span style="grid-column: 1 / 2; font-family: var(--font-serif); font-style: italic; font-size: 0.95rem; opacity: 0.8;" data-i18n="auger.next_sub">Bee venom collection device</span>
+  </a>
+
+  <!-- Footer -->
+  <footer class="pp-footer">
+    <span data-i18n="auger.footer_left">© 2026 Fatima Ramirez</span>
+    <a href="index.html" class="accent" style="text-decoration: none; color: inherit;" data-i18n="auger.footer_right_back">Back to Index ↑</a>
+  </footer>
+</main>
+
+<script src="js/i18n.js"></script>
+</body>
+</html>

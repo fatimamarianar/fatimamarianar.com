@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "lang": "es",
+    "title_home": "Fatima Ramirez — Ingeniera Mecatrónica",
+    "title_auger": "Subsistema de extrusión por husillo — Fatima Ramirez"
+  },
+
+  "nav": {
+    "index": "01 Inicio",
+    "work": "02 Proyectos",
+    "about": "03 Sobre mí",
+    "contact": "04 Contacto"
+  },
+
+  "header_strip": {
+    "center": "fatima_ramirez / portfolio.2026",
+    "right": "v.01"
+  },
+
+  "home": {
+    "name_first": "Fatima",
+    "name_last": "Ramirez",
+    "role": "Ingeniera Mecatrónica",
+    "available": "Disponible",
+    "tagline": "Construyendo sistemas físicos inteligentes y herramientas que hacen el trabajo de otras personas más fácil (y menos aburrido).",
+
+    "spec_label_role": "rol",
+    "spec_label_focus": "enfoque",
+    "spec_label_stack": "stack",
+    "spec_label_based": "base",
+    "spec_label_status": "estado",
+
+    "spec_role": "Ingeniera Mecatrónica",
+    "spec_focus": "Sistemas físicos inteligentes",
+    "spec_stack": "Firmware embebido · PCB mixto · CAD · integración multi-dominio",
+    "spec_based": "Edmonton, AB · abierta a reubicación · remoto-amigable",
+    "spec_status": "● Abierta a colaboración",
+
+    "section_work": "Trabajo seleccionado",
+    "section_work_count": "04 proyectos",
+
+    "p1_tag": "Proyecto 01",
+    "p1_year": "2023–2026",
+    "p1_thumb_placeholder": "Foto del cabezal",
+    "p1_title": "Cabezal por husillo",
+    "p1_desc": "Subsistema modular de extrusión por husillo, diseñado para materiales cementíceos en impresión 3D a media escala para construcción.",
+    "p1_stack": "SolidWorks · PCB custom · Duet 3 · G-code",
+
+    "p2_tag": "Proyecto 02",
+    "p2_year": "2019–2020",
+    "p2_thumb_placeholder": "EDAPI en campo",
+    "p2_title": "EDAPI",
+    "p2_desc": "Sistema de estimulación controlada que provoca picaduras de abejas sobre vidrio — sin dañarlas. Diseñado para extracción de apitoxina en apiarios al aire libre. El cliente pidió otra unidad en 2024.",
+    "p2_stack": "ESP32 · PCB con puente H · firmware C/C++",
+
+    "p3_tag": "Proyecto 03",
+    "p3_year": "2019–2020",
+    "p3_thumb_placeholder": "Dispositivo CAHD",
+    "p3_title": "CAHD",
+    "p3_desc": "Dispositivo biométrico IoT diseñado para resistir vandalismo. 13 iteraciones de PCB, 4 versiones del producto, doble ESP32 con WiFi + Ethernet + GPRS con failover.",
+    "p3_stack": "Doble ESP32 · carcasa acero inoxidable · HTTP/JSON",
+
+    "p4_tag": "Proyecto 04",
+    "p4_year": "2020–2021",
+    "p4_thumb_placeholder": "Envasadora de miel",
+    "p4_title": "Envasadora de miel",
+    "p4_desc": "Máquina envasadora semi-automática para un apicultor, con control de llenado en lazo cerrado, calefacción y agitador inspirado en batidora de cocina. Precisión de ±15 g en envases de 1 kg.",
+    "p4_stack": "ESP32 · celda de carga HX711 · firmware FSM",
+
+    "footer_left": "© 2026 Fatima Ramirez",
+    "footer_links_linkedin": "LinkedIn",
+    "footer_links_email": "Email",
+    "footer_links_cv": "Descargar CV"
+  },
+
+  "auger": {
+    "breadcrumb_work": "Proyectos",
+    "breadcrumb_current": "Cabezal por husillo",
+
+    "tag": "Proyecto 01 · Investigación MSc",
+    "title_main": "Subsistema de",
+    "title_em": "extrusión por husillo",
+    "title_sub": "para impresión 3D en construcción",
+    "subtitle": "Diseñando un cabezal modular para extruir materiales cementíceos a escala de construcción.",
+
+    "hero_placeholder": "CABEZAL MONTADO EN EL PÓRTICO",
+    "hero_placeholder_small": "/assets/images/auger-hero.jpg",
+    "hero_corner": "01 / Portada",
+
+    "spec_k_year": "año",
+    "spec_v_year": "2023 – 2026",
+    "spec_k_role": "rol",
+    "spec_v_role": "Ingeniera Mecatrónica líder · Investigación MSc",
+    "spec_k_team": "equipo",
+    "spec_v_team": "Diseño individual + coordinación de hasta 3 colaboradores por ciclo experimental",
+    "spec_k_stack": "stack",
+    "spec_v_stack": "SolidWorks · PCB custom · firmware Duet 3 · G-code",
+    "spec_k_status": "estado",
+    "spec_v_status": "Prototipo validado · aceptado en IMECE 2026",
+
+    "section_context_num": "01",
+    "section_context_label": "Contexto",
+    "h3_context": "Por qué importa",
+    "context_p1": "La impresión 3D en construcción es un campo joven. El laboratorio donde trabajé tenía una impresora pórtico a media escala con un extrusor de pistón — una jeringa empujando pasta a través de una boquilla. Funcionaba, pero tenía tres cuellos de botella operacionales persistentes:",
+    "context_li1": "La limpieza es brutal — el cemento endurece rápido; desensamblar y limpiar el pistón toma mucho tiempo",
+    "context_li2": "La recarga es manual — cada impresión requiere pre-mezclado, carga y presurización completos",
+    "context_li3": "La reconfigurabilidad es pobre — cambiar boquilla, escala o material muchas veces significa reconstruir el extrusor",
+    "context_p2": "Mi tarea: diseñar un cabezal de reemplazo que redujera estas fricciones, se integrara con la arquitectura de control existente, y siguiera siendo reconfigurable para futuros experimentos de material y escala.",
+
+    "section_approach_num": "02",
+    "section_approach_label": "Enfoque",
+    "h3_approach": "Cómo lo resolví",
+    "approach_intro": "Elegí un mecanismo basado en husillo: un tornillo giratorio empuja el material de forma continua a través de una boquilla intercambiable, reemplazando el comportamiento discreto de carga y empuje del pistón.",
+    "approach_h4_why": "Por qué husillo en lugar de pistón",
+    "approach_why_li1": "Extrusión continua — sin pausas de recarga durante la impresión",
+    "approach_why_li2": "Limpieza más rápida — el tornillo puede auto-purgarse girando",
+    "approach_why_li3": "Trayectoria húmeda mecánicamente más simple — menos sellos, menos fricción",
+    "approach_h4_domains": "Responsabilidad multi-dominio",
+    "approach_intro_domains": "El cabezal requería trabajo de extremo a extremo en cuatro dominios, todos bajo mi responsabilidad:",
+    "tbl_dom_1": "Diseño mecánico",
+    "tbl_dom_1_desc": "Dimensioné la geometría del husillo adaptando modelos de presión-arrastre de extrusión de polímeros a materiales cementíceos. Diseñé un sistema modular: módulo de actuación separable y módulo húmedo, con interfaces de liberación rápida.",
+    "tbl_dom_2": "Tren motriz",
+    "tbl_dom_2_desc": "Seleccioné un servo DC de 400 W (1.27 Nm nominal, IP65, freno integrado), reductor 50:1 NEMA 34, acople flexible, y mandril con cono Jacobs para modularidad de herramienta.",
+    "tbl_dom_3": "Electrónica",
+    "tbl_dom_3_desc": "PCB custom para I/O digital del driver del servo. Integré fuente de 48V/600W, resistencia de frenado regenerativo y relé de potencia dentro de la caja de control Duet 3 existente.",
+    "tbl_dom_4": "Firmware",
+    "tbl_dom_4_desc": "Configuré el Servo Tuning Software, actualicé config.g del Duet 3, implementé control PULSE/DIR vía G-code, documenté la ruta a futuro para MODBUS.",
+    "approach_diag_placeholder": "DIAGRAMA DE ARQUITECTURA",
+    "approach_diag_caption_left": "fig.01 — sistema del cabezal por husillo",
+    "approach_diag_caption_right": "mech · elec · firmware",
+
+    "approach_h4_tradeoffs": "Compromisos clave evaluados",
+    "approach_tradeoffs_li1": "Extrusión por husillo vs. pistón",
+    "approach_tradeoffs_li2": "Motor paso a paso vs. servo DC vs. BLDC",
+    "approach_tradeoffs_li3": "Diámetro de salida vs. tamaño de agregado",
+    "approach_tradeoffs_li4": "Modularidad vs. número de sujetadores",
+    "approach_h4_validation": "Marco de validación",
+    "approach_validation": "Derivé 9 requisitos de diseño formales desde los cuellos de botella del sistema previo y la literatura. Cada requisito fue validado mediante inspección, análisis, prueba en seco, o prueba con material.",
+
+    "section_result_num": "03",
+    "section_result_label": "Resultado",
+    "h3_result": "Lo que logró",
+    "result_intro": "Probado contra premezclas cementíceas con agregados de hasta 2 mm (Sand Mix, variantes de Mortar Mix), imprimiendo pruebas en línea recta con múltiples capas (2–3 capas apiladas).",
+    "result_callout1_label": "Tiempo de limpieza",
+    "result_callout1_stat": "Reducción significativa vs. pistón",
+    "result_callout1_desc": "Las métricas exactas serán publicadas después de la publicación en IMECE 2026.",
+    "result_callout2_label": "Torque del tren motriz",
+    "result_callout2_stat": "Coincidió con modelo analítico",
+    "result_callout2_desc": "Las mediciones de campo corroboraron las estimaciones preliminares del modelo de extrusión de polímeros adaptado.",
+    "result_video_placeholder": "Video — Cabezal extruyendo mortero",
+    "result_video_meta": "01:24 · MP4",
+    "result_h4_limitations": "Limitaciones identificadas para futuras iteraciones",
+    "result_limit_li1": "El comportamiento de alimentación de la tolva requiere refinamiento (puenteo ocasional)",
+    "result_limit_li2": "El mandril se aflojó bajo condiciones de alta resistencia — versiones futuras necesitan una interfaz de herramienta más robusta",
+    "result_limit_li3": "La geometría inicial de boquilla falló en las pruebas; se fabricaron geometrías alternativas durante la noche para recuperar el ciclo de prueba",
+    "result_h4_published": "Publicaciones",
+    "result_pub_main": "IMECE 2026 · ASME, Vancouver — aceptado",
+    "result_pub_related_label": "Trabajo relacionado",
+    "result_pub_related_1": "Revisión del estado del arte · Construction Robotics (2025)",
+    "result_pub_related_2": "Evaluación del desempeño de la impresora de pistón antecesora · Construction Robotics (en revisión)",
+
+    "section_gallery_num": "04",
+    "section_gallery_label": "Galería",
+    "h3_gallery": "Proceso y detalles",
+    "gallery_a_caption": "01 · CAD",
+    "gallery_a_placeholder": "Render CAD",
+    "gallery_b_caption": "02 · PCB",
+    "gallery_b_placeholder": "PCB custom",
+    "gallery_c_caption": "03 · Montaje",
+    "gallery_c_placeholder": "Setup del laboratorio",
+    "gallery_d_caption": "04 · Salida",
+    "gallery_d_placeholder": "Líneas impresas",
+
+    "next_label": "Siguiente proyecto →",
+    "next_title": "EDAPI",
+    "next_sub": "Dispositivo de extracción de veneno de abeja",
+
+    "footer_left": "© 2026 Fatima Ramirez",
+    "footer_right_back": "Volver al inicio ↑"
+  }
+}

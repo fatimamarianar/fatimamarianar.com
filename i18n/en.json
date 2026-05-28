@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "lang": "en",
+    "title_home": "Fatima Ramirez — Mechatronics Engineer",
+    "title_auger": "Auger-based extrusion subsystem — Fatima Ramirez"
+  },
+
+  "nav": {
+    "index": "01 Index",
+    "work": "02 Work",
+    "about": "03 About",
+    "contact": "04 Contact"
+  },
+
+  "header_strip": {
+    "center": "fatima_ramirez / portfolio.2026",
+    "right": "v.01"
+  },
+
+  "home": {
+    "name_first": "Fatima",
+    "name_last": "Ramirez",
+    "role": "Mechatronics Engineer",
+    "available": "Available",
+    "tagline": "Building intelligent physical systems and tools that make other people's work easier (and less boring).",
+
+    "spec_label_role": "role",
+    "spec_label_focus": "focus",
+    "spec_label_stack": "stack",
+    "spec_label_based": "based",
+    "spec_label_status": "status",
+
+    "spec_role": "Mechatronics Engineer",
+    "spec_focus": "Intelligent physical systems",
+    "spec_stack": "Embedded firmware · mixed-signal PCB · CAD · multi-domain integration",
+    "spec_based": "Edmonton, AB · open to relocation · remote-friendly",
+    "spec_status": "● Open to collaboration",
+
+    "section_work": "Selected work",
+    "section_work_count": "04 projects",
+
+    "p1_tag": "Project 01",
+    "p1_year": "2023–2026",
+    "p1_thumb_placeholder": "Printhead photo",
+    "p1_title": "Auger printhead",
+    "p1_desc": "A modular auger-based extrusion subsystem designed for cement-based materials in mid-scale 3D printing for construction.",
+    "p1_stack": "SolidWorks · custom PCB · Duet 3 · G-code",
+
+    "p2_tag": "Project 02",
+    "p2_year": "2019–2020",
+    "p2_thumb_placeholder": "EDAPI in field",
+    "p2_title": "EDAPI",
+    "p2_desc": "A controlled-stimulation system that gets bees to sting glass — safely. Built for apitoxin harvesting in outdoor apiaries; client placed repeat order in 2024.",
+    "p2_stack": "ESP32 · H-bridge PCB · C/C++ firmware",
+
+    "p3_tag": "Project 03",
+    "p3_year": "2019–2020",
+    "p3_thumb_placeholder": "CAHD device",
+    "p3_title": "CAHD",
+    "p3_desc": "An IoT biometric attendance device tough enough to outlast vandals. 13 PCB iterations, 4 product versions, dual-ESP32 with WiFi + Ethernet + GPRS failover.",
+    "p3_stack": "Dual ESP32 · stainless-steel chassis · HTTP/JSON",
+
+    "p4_tag": "Project 04",
+    "p4_year": "2020–2021",
+    "p4_thumb_placeholder": "Honey packager",
+    "p4_title": "Honey packager",
+    "p4_desc": "A semi-automatic packaging machine for a beekeeper, with closed-loop fill control, heating, and a kitchen-mixer-inspired agitator. ±15 g accuracy on 1 kg jars.",
+    "p4_stack": "ESP32 · HX711 load cell · FSM firmware",
+
+    "footer_left": "© 2026 Fatima Ramirez",
+    "footer_links_linkedin": "LinkedIn",
+    "footer_links_email": "Email",
+    "footer_links_cv": "Download CV"
+  },
+
+  "auger": {
+    "breadcrumb_work": "Work",
+    "breadcrumb_current": "Auger printhead",
+
+    "tag": "Project 01 · MSc Research",
+    "title_main": "Auger-based",
+    "title_em": "extrusion subsystem",
+    "title_sub": "for construction 3D printing",
+    "subtitle": "Designing a modular printhead to extrude cement-based materials at construction scale.",
+
+    "hero_placeholder": "PRINTHEAD ASSEMBLED ON GANTRY",
+    "hero_placeholder_small": "/assets/images/auger-hero.jpg",
+    "hero_corner": "01 / Hero",
+
+    "spec_k_year": "year",
+    "spec_v_year": "2023 – 2026",
+    "spec_k_role": "role",
+    "spec_v_role": "Lead Mechatronics Engineer · MSc Research",
+    "spec_k_team": "team",
+    "spec_v_team": "Solo design + coordination of up to 3 collaborators per cycle",
+    "spec_k_stack": "stack",
+    "spec_v_stack": "SolidWorks · custom PCB · Duet 3 firmware · G-code",
+    "spec_k_status": "status",
+    "spec_v_status": "Prototype validated · accepted at IMECE 2026",
+
+    "section_context_num": "01",
+    "section_context_label": "Context",
+    "h3_context": "Why this matters",
+    "context_p1": "3D printing for construction is a young field. The lab where I worked had an existing mid-scale gantry printer with a piston-based extruder — a syringe pushing paste through a nozzle. It worked, but had three persistent operational bottlenecks:",
+    "context_li1": "Cleanup is brutal — cement hardens fast; piston disassembly and cleaning take a long time",
+    "context_li2": "Reload is manual — each print needs full pre-mixing, loading, and pressurizing",
+    "context_li3": "Reconfigurability is poor — changing nozzle, scale, or material often means rebuilding the extruder",
+    "context_p2": "My task: design a replacement printhead that reduces these frictions, integrates with the existing control architecture, and remains reconfigurable for future material and scale experiments.",
+
+    "section_approach_num": "02",
+    "section_approach_label": "Approach",
+    "h3_approach": "How I solved it",
+    "approach_intro": "Chose an auger-based mechanism: a rotating screw pushes material continuously through an exchangeable nozzle, replacing the discrete batch-and-push behavior of a piston.",
+    "approach_h4_why": "Why auger over piston",
+    "approach_why_li1": "Continuous extrusion — no mid-print reload pauses",
+    "approach_why_li2": "Faster cleanup — the screw can self-purge by spinning",
+    "approach_why_li3": "Mechanically simpler wetted path — fewer seals, less friction",
+    "approach_h4_domains": "Multi-domain ownership",
+    "approach_intro_domains": "The printhead required end-to-end work across four domains, all of which I owned:",
+    "tbl_dom_1": "Mechanical design",
+    "tbl_dom_1_desc": "Sized auger geometry by adapting polymer-extrusion drag-pressure models to cement-based materials. Designed a modular system: separable actuation module and wetted module, with quick-release interfaces.",
+    "tbl_dom_2": "Drive train",
+    "tbl_dom_2_desc": "Selected a 400 W DC servo (1.27 Nm rated, IP65, integrated brake), 50:1 NEMA 34 gearbox, flexible coupling, and drill chuck with Jacobs taper for tool modularity.",
+    "tbl_dom_3": "Electronics",
+    "tbl_dom_3_desc": "Custom PCB for servo driver digital I/O. Integrated 48V/600W power supply, regenerative braking resistor, and power relay into the existing Duet 3 control box.",
+    "tbl_dom_4": "Firmware",
+    "tbl_dom_4_desc": "Configured Servo Tuning Software, updated config.g on the Duet 3, implemented PULSE/DIR control through G-code, documented future MODBUS roadmap.",
+    "approach_diag_placeholder": "ARCHITECTURE DIAGRAM",
+    "approach_diag_caption_left": "fig.01 — auger printhead system",
+    "approach_diag_caption_right": "mech · elec · firmware",
+
+    "approach_h4_tradeoffs": "Key trade-offs evaluated",
+    "approach_tradeoffs_li1": "Auger vs. piston extrusion",
+    "approach_tradeoffs_li2": "Stepper vs. DC servo vs. BLDC motor",
+    "approach_tradeoffs_li3": "Outlet diameter vs. aggregate size",
+    "approach_tradeoffs_li4": "Modularity vs. fastener count",
+    "approach_h4_validation": "Validation framework",
+    "approach_validation": "Derived 9 formal design requirements from prior system bottlenecks and literature. Each requirement was validated through inspection, analysis, dry test, or material test.",
+
+    "section_result_num": "03",
+    "section_result_label": "Result",
+    "h3_result": "What it achieved",
+    "result_intro": "Tested against cement-based premixes with up to 2 mm aggregates (Sand Mix, Mortar Mix variants), printing straight-line, multi-layer test prints (2–3 layers stacked).",
+    "result_callout1_label": "Cleanup time",
+    "result_callout1_stat": "Significant reduction vs. piston",
+    "result_callout1_desc": "Embargoed metrics will be released after the IMECE 2026 publication.",
+    "result_callout2_label": "Drive train torque",
+    "result_callout2_stat": "Matched analytical model",
+    "result_callout2_desc": "Field measurements corroborated preliminary estimates from the adapted polymer-extrusion model.",
+    "result_video_placeholder": "Video — Printhead extruding mortar mix",
+    "result_video_meta": "01:24 · MP4",
+    "result_h4_limitations": "Limitations identified for future iteration",
+    "result_limit_li1": "Hopper feeding behavior needs refinement (occasional bridging)",
+    "result_limit_li2": "Drill chuck loosened under high-resistance conditions — future versions need a more robust tool interface",
+    "result_limit_li3": "Initial nozzle geometry failed during testing; alternate geometries were fabricated overnight to recover the test cycle",
+    "result_h4_published": "Published",
+    "result_pub_main": "IMECE 2026 · ASME, Vancouver — accepted",
+    "result_pub_related_label": "Related work",
+    "result_pub_related_1": "State-of-the-art review · Construction Robotics (2025)",
+    "result_pub_related_2": "Performance assessment of the predecessor piston printer · Construction Robotics (under review)",
+
+    "section_gallery_num": "04",
+    "section_gallery_label": "Gallery",
+    "h3_gallery": "Process & details",
+    "gallery_a_caption": "01 · CAD",
+    "gallery_a_placeholder": "CAD render",
+    "gallery_b_caption": "02 · PCB",
+    "gallery_b_placeholder": "Custom PCB",
+    "gallery_c_caption": "03 · Setup",
+    "gallery_c_placeholder": "Lab setup",
+    "gallery_d_caption": "04 · Output",
+    "gallery_d_placeholder": "Printed lines",
+
+    "next_label": "Next project →",
+    "next_title": "EDAPI",
+    "next_sub": "Bee venom collection device",
+
+    "footer_left": "© 2026 Fatima Ramirez",
+    "footer_right_back": "Back to Index ↑"
+  }
+}

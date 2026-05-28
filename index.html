@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fatima Ramirez — Mechatronics Engineer</title>
+<meta name="description" content="Portfolio of Fatima Mariana Ramirez Rodriguez — Mechatronics engineer building intelligent physical systems.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,800;1,300;1,800&family=Inter+Tight:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+
+<body class="theme-dark" data-i18n-title="meta.title_home">
+
+<!-- Header strip (terminal-style) -->
+<div class="header-strip">
+  <span class="dots">● ● ●</span>
+  <span class="center" data-i18n="header_strip.center">fatima_ramirez / portfolio.2026</span>
+  <span class="right" data-i18n="header_strip.right">v.01</span>
+</div>
+
+<!-- Navigation -->
+<nav class="nav" aria-label="Primary">
+  <ul>
+    <li><a href="index.html" class="current" data-i18n="nav.index">01 Index</a></li>
+    <li><a href="#work" data-i18n="nav.work">02 Work</a></li>
+    <li><a href="#about" data-i18n="nav.about">03 About</a></li>
+    <li><a href="#contact" data-i18n="nav.contact">04 Contact</a></li>
+    <li class="lang-toggle" aria-label="Language toggle">
+      <button data-lang-btn="en" class="active" aria-pressed="true">EN</button>
+      <button data-lang-btn="es" aria-pressed="false">ES</button>
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <section class="home-hero">
+    <h1 class="display display-name">
+      <span data-i18n="home.name_first">Fatima</span><br>
+      <em data-i18n="home.name_last">Ramirez</em>
+    </h1>
+
+    <div class="role-line">
+      <span class="role" data-i18n="home.role">Mechatronics Engineer</span>
+      <span class="sep">·</span>
+      <span data-i18n="home.available">Available</span><span class="cursor" aria-hidden="true"></span>
+    </div>
+
+    <p class="tagline" data-i18n="home.tagline">
+      Building intelligent physical systems and tools that make other people's work easier (and less boring).
+    </p>
+
+    <!-- SPEC SHEET -->
+    <div class="spec-sheet" aria-label="Profile spec">
+      <div class="spec-row">
+        <span class="k" data-i18n="home.spec_label_role">role</span>
+        <span class="v" data-i18n="home.spec_role">Mechatronics Engineer</span>
+      </div>
+      <div class="spec-row">
+        <span class="k" data-i18n="home.spec_label_focus">focus</span>
+        <span class="v" data-i18n="home.spec_focus">Intelligent physical systems</span>
+      </div>
+      <div class="spec-row">
+        <span class="k" data-i18n="home.spec_label_stack">stack</span>
+        <span class="v" data-i18n="home.spec_stack">Embedded firmware · mixed-signal PCB · CAD · multi-domain integration</span>
+      </div>
+      <div class="spec-row">
+        <span class="k" data-i18n="home.spec_label_based">based</span>
+        <span class="v" data-i18n="home.spec_based">Edmonton, AB · open to relocation · remote-friendly</span>
+      </div>
+      <div class="spec-row">
+        <span class="k" data-i18n="home.spec_label_status">status</span>
+        <span class="v accent" data-i18n="home.spec_status">● Open to collaboration</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section id="work">
+    <div class="section-label">
+      <span data-i18n="home.section_work">Selected work</span>
+      <span class="count" data-i18n="home.section_work_count">04 projects</span>
+    </div>
+
+    <div class="project-cards">
+
+      <!-- Project 01 — Auger -->
+      <a class="project-card" href="auger.html">
+        <div class="pc-header">
+          <span data-i18n="home.p1_tag">Project 01</span>
+          <span data-i18n="home.p1_year">2023–2026</span>
+        </div>
+        <div class="pc-thumb thumb-1">
+          <span class="placeholder" data-i18n="home.p1_thumb_placeholder">Printhead photo</span>
+        </div>
+        <div class="pc-body">
+          <h4 data-i18n="home.p1_title">Auger printhead</h4>
+          <p class="pc-desc" data-i18n="home.p1_desc">
+            A modular auger-based extrusion subsystem designed for cement-based materials in mid-scale 3D printing for construction.
+          </p>
+          <div class="pc-stack" data-i18n="home.p1_stack">SolidWorks · custom PCB · Duet 3 · G-code</div>
+        </div>
+      </a>
+
+      <!-- Project 02 — EDAPI -->
+      <a class="project-card" href="#" aria-disabled="true">
+        <div class="pc-header">
+          <span data-i18n="home.p2_tag">Project 02</span>
+          <span data-i18n="home.p2_year">2019–2020</span>
+        </div>
+        <div class="pc-thumb thumb-2">
+          <span class="placeholder" data-i18n="home.p2_thumb_placeholder">EDAPI in field</span>
+        </div>
+        <div class="pc-body">
+          <h4 data-i18n="home.p2_title">EDAPI</h4>
+          <p class="pc-desc" data-i18n="home.p2_desc">
+            A controlled-stimulation system that gets bees to sting glass — safely.
+          </p>
+          <div class="pc-stack" data-i18n="home.p2_stack">ESP32 · H-bridge PCB · C/C++ firmware</div>
+        </div>
+      </a>
+
+      <!-- Project 03 — CAHD -->
+      <a class="project-card" href="#" aria-disabled="true">
+        <div class="pc-header">
+          <span data-i18n="home.p3_tag">Project 03</span>
+          <span data-i18n="home.p3_year">2019–2020</span>
+        </div>
+        <div class="pc-thumb thumb-3">
+          <span class="placeholder" data-i18n="home.p3_thumb_placeholder">CAHD device</span>
+        </div>
+        <div class="pc-body">
+          <h4 data-i18n="home.p3_title">CAHD</h4>
+          <p class="pc-desc" data-i18n="home.p3_desc">
+            An IoT biometric attendance device tough enough to outlast vandals.
+          </p>
+          <div class="pc-stack" data-i18n="home.p3_stack">Dual ESP32 · stainless-steel chassis · HTTP/JSON</div>
+        </div>
+      </a>
+
+      <!-- Project 04 — Honey packager -->
+      <a class="project-card" href="#" aria-disabled="true">
+        <div class="pc-header">
+          <span data-i18n="home.p4_tag">Project 04</span>
+          <span data-i18n="home.p4_year">2020–2021</span>
+        </div>
+        <div class="pc-thumb thumb-4">
+          <span class="placeholder" data-i18n="home.p4_thumb_placeholder">Honey packager</span>
+        </div>
+        <div class="pc-body">
+          <h4 data-i18n="home.p4_title">Honey packager</h4>
+          <p class="pc-desc" data-i18n="home.p4_desc">
+            A semi-automatic packaging machine for a beekeeper, with closed-loop fill control.
+          </p>
+          <div class="pc-stack" data-i18n="home.p4_stack">ESP32 · HX711 load cell · FSM firmware</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="home-footer" id="contact">
+    <span class="footer-left" data-i18n="home.footer_left">© 2026 Fatima Ramirez</span>
+    <span class="links">
+      <a href="https://linkedin.com/in/fatimamarianar" target="_blank" rel="noopener" data-i18n="home.footer_links_linkedin">LinkedIn</a>
+      <a href="mailto:fatimamarianar@gmail.com" data-i18n="home.footer_links_email">Email</a>
+      <a href="assets/FMRR_CV_2026.pdf" target="_blank" rel="noopener" data-i18n="home.footer_links_cv">Download CV</a>
+    </span>
+    <span class="signature-cursor" aria-hidden="true">_<span class="cursor"></span></span>
+  </footer>
+</main>
+
+<!-- i18n script -->
+<script src="js/i18n.js"></script>
+
+</body>
+</html>
