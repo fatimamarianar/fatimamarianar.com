@@ -16,7 +16,7 @@
 }
 
 .breadcrumb a {
-  color: var(--light-mustard);
+  color: var(--light-text);
   text-decoration: none;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .breadcrumb .current {
-  color: var(--light-mustard);
+  color: var(--light-text);
 }
 
 /* ===== Project title block ===== */
@@ -47,7 +47,7 @@
   font-family: var(--font-display);
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.0em;
   font-size: clamp(2.4rem, 11vw, 3.6rem);
   line-height: 0.9;
   margin-bottom: 0.5rem;
@@ -62,12 +62,10 @@
 }
 
 .pp-subtitle {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-body);
   font-size: 1.15rem;
   line-height: 1.4;
   opacity: 0.88;
-  max-width: 38ch;
   margin-bottom: 1.5rem;
 }
 
@@ -196,7 +194,7 @@
 }
 
 .pp-section .num {
-  color: var(--light-mustard);
+  color: var(--light-teal-mid);
   opacity: 1;
 }
 
@@ -222,7 +220,7 @@
   font-size: 0.94rem;
   line-height: 1.65;
   margin-bottom: 1rem;
-  max-width: 60ch;
+
   opacity: 0.92;
 }
 
@@ -449,7 +447,7 @@
 /* ===== Result callouts ===== */
 .pp-result {
   background: var(--light-bg-card);
-  border-left: 3px solid var(--light-mustard);
+  border-left: 3px solid var(--light-red);
   padding: 0.9rem 1rem;
   margin: 1rem 0;
 }
@@ -459,7 +457,7 @@
   font-size: 0.58rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--light-mustard);
+  color: var(--light-red);
   margin-bottom: 0.4rem;
 }
 
@@ -475,8 +473,7 @@
 .pp-result .stat .num { color: var(--light-mustard); }
 
 .pp-result .desc {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-body);
   font-size: 0.92rem;
   opacity: 0.85;
 }

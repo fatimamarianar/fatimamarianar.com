@@ -13,8 +13,8 @@
   --dark-text-dim: rgba(236, 227, 204, 0.7);
   --dark-line: rgba(236, 227, 204, 0.2);
   --dark-mustard: #f5af42;
-  --dark-teal-mid: #5a8281;
-  --dark-red: #b8553a;
+  --dark-teal-mid: #83bfbc;
+  --dark-red: #cd5c3d;
 
   /* LIGHT PALETTE (for project pages) */
   --light-bg: #ece3cc;
@@ -23,16 +23,15 @@
   --light-text: #0e262c;
   --light-text-dim: rgba(14, 38, 44, 0.7);
   --light-line: rgba(14, 38, 44, 0.2);
-  --light-mustard: #e09420;
+  --light-mustard: #d68d1e;
   --light-mustard-bright: #f5af42;
-  --light-teal-mid: #5a8281;
+  --light-teal-mid: #297470;
   --light-red: #b8553a;
 
   /* Typography */
   --font-display: 'Barlow Condensed', sans-serif;
   --font-body: 'Inter Tight', system-ui, sans-serif;
   --font-mono: 'Geist Mono', 'JetBrains Mono', monospace;
-  --font-serif: 'Instrument Serif', serif;
 
   /* Spacing */
   --space-xs: 0.4rem;
@@ -42,7 +41,7 @@
   --space-xl: 3.5rem;
 
   /* Containers */
-  --max-content: 760px;
+  --max-content: 880px;
 }
 
 /* ===== Reset ===== */
@@ -80,7 +79,7 @@ body.theme-light {
   font-family: var(--font-display);
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   line-height: 0.88;
 }
 
@@ -88,15 +87,14 @@ body.theme-light {
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 300;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 .theme-dark .display em { color: var(--dark-mustard); }
 .theme-light .display em { color: var(--light-mustard); }
 
 .serif {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-body);
 }
 
 .mono {
