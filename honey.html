@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semi-automatic honey packager — Fatima Ramirez</title>
+<meta name="description" content="A closed-loop honey packaging machine with weighing, heating, and mixing — electronics, firmware, and mechanism by Fatima Ramirez.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,800;1,300;1,800&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/project.css">
+</head>
+
+<body class="theme-light" data-i18n-title="meta.title_honey">
+
+<!-- Header strip -->
+<div class="header-strip">
+  <span class="dots">● ● ●</span>
+  <span class="center" data-i18n="header_strip.center">fatima_ramirez / portfolio.2026</span>
+  <span class="right" data-i18n="header_strip.right">v.01</span>
+</div>
+
+<!-- Navigation -->
+<nav class="nav" aria-label="Primary">
+  <ul>
+    <li><a href="index.html" data-i18n="nav.index">01 Index</a></li>
+    <li><a href="index.html#work" class="current" data-i18n="nav.work">02 Work</a></li>
+    <li><a href="about.html" data-i18n="nav.about">03 About</a></li>
+    <li><a href="index.html#contact" data-i18n="nav.contact">04 Contact</a></li>
+    <li class="lang-toggle" aria-label="Language toggle">
+      <button data-lang-btn="en" class="active" aria-pressed="true">EN</button>
+      <button data-lang-btn="es" aria-pressed="false">ES</button>
+    </li>
+  </ul>
+</nav>
+
+<main class="project-page">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html#work" data-i18n="honey.breadcrumb_work">Work</a>
+    <span class="sep">/</span>
+    <span class="current" data-i18n="honey.breadcrumb_current">Honey packager</span>
+  </div>
+
+  <!-- Title block -->
+  <div class="tag-flag" data-i18n="honey.tag">Project 04 · Trihton</div>
+
+  <h1 class="pp-title">
+    <span data-i18n="honey.title_main">Semi-automatic</span><br>
+    <em data-i18n="honey.title_em">honey packager</em>
+  </h1>
+
+  <p class="pp-subtitle" data-i18n="honey.subtitle">
+    A weighing-and-filling machine for a beekeeper who needed to scale.
+  </p>
+
+  <!-- Hero media -->
+  <div class="pp-hero-media">
+    <span class="corner-label" data-i18n="honey.hero_corner">01 / Hero</span>
+    <div class="placeholder">
+      <span data-i18n="honey.hero_placeholder">PACKAGER IN OPERATION</span>
+      <span class="small" data-i18n="honey.hero_placeholder_small">/assets/images/honey-hero.jpg</span>
+    </div>
+  </div>
+
+  <!-- Spec sheet -->
+  <div class="pp-spec">
+    <div class="row">
+      <span class="k" data-i18n="honey.spec_k_year">year</span>
+      <span class="v" data-i18n="honey.spec_v_year">2020 – 2021</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="honey.spec_k_role">role</span>
+      <span class="v" data-i18n="honey.spec_v_role">Lead electronics, firmware & mixer mechanism · 3-person team</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="honey.spec_k_team">team</span>
+      <span class="v" data-i18n="honey.spec_v_team">3 people — I led electronics/firmware/mixer; colleagues did valve, casing, pump, containers</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="honey.spec_k_stack">stack</span>
+      <span class="v" data-i18n="honey.spec_v_stack">ESP32 · custom PCB · HX711 load cell · solenoid valve · AC pump · C/C++ FSM</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="honey.spec_k_status">status</span>
+      <span class="v accent" data-i18n="honey.spec_v_status">Delivered · in active use · ±15 g accuracy on 1 kg jars</span>
+    </div>
+  </div>
+
+  <!-- ===== 01 CONTEXT ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="honey.section_context_num">01</span> · <span data-i18n="honey.section_context_label">Context</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="honey.h3_context">Why this matters</h3>
+  <p class="pp-body" data-i18n="honey.context_p1">
+    After EDAPI, the same beekeeper came back with a different problem. His honey packaging was fully manual: open a valve, watch a scale, close the valve when the jar looked full.
+  </p>
+  <ul class="pp-list">
+    <li data-i18n="honey.context_li1">Overfill loss — inconsistent manual fills meant lost product over hundreds of units a day</li>
+    <li data-i18n="honey.context_li2">Heavy lifting — moving honey from 1-ton tanks into smaller containers was physically demanding</li>
+    <li data-i18n="honey.context_li3">Crystallization — once partially solid, honey won't flow through valves or pumps</li>
+  </ul>
+  <p class="pp-body" data-i18n="honey.context_p2">
+    He needed a system that could dispense accurately into 1 kg jars unsupervised, keep honey warm enough to flow (30–35°C) without degrading it (honey breaks down above ~40°C), and continuously homogenize it to prevent crystallization.
+  </p>
+
+  <!-- ===== 02 APPROACH ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="honey.section_approach_num">02</span> · <span data-i18n="honey.section_approach_label">Approach</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="honey.h3_approach">How I solved it</h3>
+  <p class="pp-body" data-i18n="honey.approach_intro">
+    A closed-loop dispensing cycle controlled by a finite state machine. The operator presses a footswitch to start a fill; the PCB does the rest.
+  </p>
+
+  <table class="pp-table">
+    <tr>
+      <th data-i18n="honey.tbl_sub_1">Pump (AC)</th>
+      <td data-i18n="honey.tbl_sub_1_desc">Moves honey from bulk container to the packaging vessel.</td>
+    </tr>
+    <tr>
+      <th data-i18n="honey.tbl_sub_2">Heater</th>
+      <td data-i18n="honey.tbl_sub_2_desc">Maintains honey at 30–35°C — fluid enough to flow, cool enough to preserve quality.</td>
+    </tr>
+    <tr>
+      <th data-i18n="honey.tbl_sub_3">Mixer (in the lid)</th>
+      <td data-i18n="honey.tbl_sub_3_desc">Eccentric agitator with flat beater attachment — continuous homogenization during packaging.</td>
+    </tr>
+    <tr>
+      <th data-i18n="honey.tbl_sub_4">Valve + load cell</th>
+      <td data-i18n="honey.tbl_sub_4_desc">Solenoid valve releases honey into the jar on the scale; load cell provides real-time weight feedback.</td>
+    </tr>
+  </table>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.5rem;" data-i18n="honey.approach_h4_domains">Multi-domain ownership</h4>
+
+  <table class="pp-table">
+    <tr>
+      <th data-i18n="honey.tbl_dom_1">Electronics</th>
+      <td data-i18n="honey.tbl_dom_1_desc">Custom mixed-signal PCB: AC power switching for pump and heater, DC motor control for the mixer, solenoid valve driver, HX711 amplifier interface, footswitch input, temperature reading. Multiple voltage domains (AC mains, DC logic, isolated analog).</td>
+    </tr>
+    <tr>
+      <th data-i18n="honey.tbl_dom_2">Mechanical (mixer)</th>
+      <td data-i18n="honey.tbl_dom_2_desc">Designed from scratch around the container lid, the motor I was given, and the need to keep honey moving without splashing: an eccentric shaft coupled to the motor with a flat beater attachment (kitchen-mixer style, for viscous mixtures). Fully integrated into the lid so the container could be sealed.</td>
+    </tr>
+    <tr>
+      <th data-i18n="honey.tbl_dom_3">Firmware</th>
+      <td data-i18n="honey.tbl_dom_3_desc">Finite state machine in C/C++ tracking valve state, pump state, and fill progress. Closed-loop fill: rolling average of 6 weight samples, valve stays open until 15 g below target — accounting for honey still in transit when the valve closes.</td>
+    </tr>
+  </table>
+
+  <!-- Inverted diagram block -->
+  <div class="pp-diagram">
+    <div class="diagram-area">
+      <span class="placeholder" data-i18n="honey.approach_diag_placeholder">CLOSED-LOOP FILL CYCLE (FSM)</span>
+    </div>
+    <div class="diagram-caption">
+      <span data-i18n="honey.approach_diag_caption_left">fig.01 — pump · heat · mix · weigh · dispense</span>
+      <span class="acc" data-i18n="honey.approach_diag_caption_right">elec · mech · firmware</span>
+    </div>
+  </div>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.5rem;" data-i18n="honey.approach_h4_decision">Key technical decision</h4>
+  <p class="pp-body" data-i18n="honey.approach_decision">
+    Rather than building a custom load cell mount, I opened a commercial electronic scale and intercepted its load cell signal directly. The <strong>HX711 amplifier</strong> was already inside, outputting a clean analog voltage. I wired that into the microcontroller's ADC and used the existing scale chassis as the weighing platform — faster development, mechanical reliability inherited from a proven product, and one less subsystem to debug.
+  </p>
+
+  <!-- ===== 03 RESULT ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="honey.section_result_num">03</span> · <span data-i18n="honey.section_result_label">Result</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="honey.h3_result">What it achieved</h3>
+
+  <!-- Callout -->
+  <div class="pp-result">
+    <div class="label" data-i18n="honey.result_callout1_label">Delivered & in use</div>
+    <div class="stat" data-i18n="honey.result_callout1_stat">±15 g on 1 kg jars</div>
+    <div class="desc" data-i18n="honey.result_callout1_desc">
+      Operator only places and removes jars — no valve timing required. In active use since 2021.
+    </div>
+  </div>
+
+  <!-- Video placeholder -->
+  <div class="pp-video">
+    <span class="vid-meta" data-i18n="honey.result_video_meta">FIELD · MP4</span>
+    <div class="play" aria-label="Play video"></div>
+  </div>
+  <p style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; margin-top: -0.5rem; margin-bottom: 1.2rem;" data-i18n="honey.result_video_placeholder">
+    Video — Packager filling jars on-site
+  </p>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.4rem;" data-i18n="honey.result_h4_open">What didn't fully work</h4>
+  <ul class="pp-list">
+    <li data-i18n="honey.result_open_li1">Mixer vibration — the eccentric agitator transferred too much motion to the container</li>
+    <li data-i18n="honey.result_open_li2">Pump reliability — under highly viscous or partially crystallized batches, the AC pump occasionally stalled</li>
+    <li data-i18n="honey.result_open_li3">Adaptive threshold (planned, partial) — the deployed firmware I have doesn't contain the adaptive 15 g offset; unclear if it shipped</li>
+  </ul>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.4rem;" data-i18n="honey.result_h4_learned">What I took from it</h4>
+  <p class="pp-body" data-i18n="honey.result_learned">
+    Honey is harder to engineer for than it looks. It's a non-Newtonian fluid that changes viscosity with temperature, time, and history. The 15 g calibration constant wasn't a bug in our design — it was a physical inevitability of fluid still in transit between the valve and the jar. Engineering the system meant accepting that no amount of cleverness erases the physics, and designing around it: oversample, predict, close early.
+  </p>
+
+  <!-- ===== 04 GALLERY ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="honey.section_gallery_num">04</span> · <span data-i18n="honey.section_gallery_label">Gallery</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="honey.h3_gallery">Process & details</h3>
+
+  <div class="pp-gallery">
+    <div class="thumb thumb-a">
+      <span class="caption" data-i18n="honey.gallery_a_caption">01 · System</span>
+      <span class="placeholder" data-i18n="honey.gallery_a_placeholder">Full machine</span>
+    </div>
+    <div class="thumb thumb-b">
+      <span class="caption" data-i18n="honey.gallery_b_caption">02 · PCB</span>
+      <span class="placeholder" data-i18n="honey.gallery_b_placeholder">Control PCB</span>
+    </div>
+    <div class="thumb thumb-c">
+      <span class="caption" data-i18n="honey.gallery_c_caption">03 · Mixer</span>
+      <span class="placeholder" data-i18n="honey.gallery_c_placeholder">Eccentric agitator</span>
+    </div>
+    <div class="thumb thumb-d">
+      <span class="caption" data-i18n="honey.gallery_d_caption">04 · Scale</span>
+      <span class="placeholder" data-i18n="honey.gallery_d_placeholder">Load cell integration</span>
+    </div>
+  </div>
+
+  <!-- Next project -->
+  <a class="pp-nav-next" href="index.html#work">
+    <span class="label" data-i18n="honey.next_label">Back to all work →</span>
+    <h5 data-i18n="honey.next_title">All projects</h5>
+    <span class="arrow">→</span>
+    <span style="grid-column: 1 / 2; font-family: var(--font-body); font-size: 0.95rem; opacity: 0.8;" data-i18n="honey.next_sub">Return to the project index</span>
+  </a>
+
+  <!-- Footer -->
+  <footer class="pp-footer">
+    <span data-i18n="honey.footer_left">© 2026 Fatima Ramirez</span>
+    <a href="index.html" class="accent" style="text-decoration: none; color: inherit;" data-i18n="honey.footer_right_back">Back to Index ↑</a>
+  </footer>
+</main>
+
+<script src="js/i18n.js"></script>
+</body>
+</html>

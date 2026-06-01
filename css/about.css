@@ -1,0 +1,280 @@
+/* =============================================================
+   ABOUT PAGE — dark theme
+   Uses design tokens from base.css. New file, does not touch others.
+============================================================= */
+
+.about-page {
+  padding-top: 0;
+}
+
+/* ===== Intro block ===== */
+.about-intro {
+  padding-top: 0.5rem;
+  margin-bottom: 1.6rem;
+}
+
+.about-intro .about-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dark-text);
+  margin-bottom: 0.8rem;
+}
+
+.about-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: clamp(2.6rem, 12vw, 4rem);
+  line-height: 0.9;
+  margin-bottom: 1rem;
+}
+
+.about-lead {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  opacity: 0.95;
+  margin-bottom: 0.8rem;
+}
+
+.about-lead strong {
+  color: var(--dark-mustard);
+  font-weight: 600;
+}
+
+.about-trajectory {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* ===== Section headers (reuse section-label pattern but as h-block) ===== */
+.about-section {
+  margin: 2rem 0 0.7rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--dark-line);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.about-section .num {
+  color: var(--dark-teal-mid);
+  opacity: 1;
+}
+
+.about-h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.65rem;
+  letter-spacing: 0.01em;
+  margin: 0.5rem 0 0.9rem;
+  line-height: 1;
+}
+
+.about-body {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.about-body strong {
+  color: var(--dark-teal-mid);
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+/* ===== "Why this work" — two motivations ===== */
+.motivation {
+  border-left: 2px solid var(--dark-teal-mid);
+  padding-left: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.motivation .m-label {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dark-text);
+  margin-bottom: 0.45rem;
+}
+
+.motivation p {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  opacity: 0.92;
+}
+
+.motivation p strong {
+  color: var(--dark-teal-mid);
+  font-weight: 600;
+}
+
+/* ===== "How I work" — principle list ===== */
+.principles {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+}
+
+.principles li {
+  padding-left: 1.4rem;
+  position: relative;
+  margin-bottom: 0.9rem;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.principles li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--dark-red);
+  font-weight: 600;
+}
+
+.principles li strong {
+  color: var(--dark-text);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.1rem;
+}
+
+.principles li span {
+  opacity: 0.82;
+}
+
+/* ===== Personal gallery ===== */
+.about-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 0.8rem 0 1rem;
+}
+
+.about-gallery .g-item {
+  aspect-ratio: 1;
+  border: 1px solid var(--dark-line);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-bg-elevated);
+}
+
+.about-gallery .g-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(236, 227, 204, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(236, 227, 204, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+  pointer-events: none;
+}
+
+.about-gallery .g-item .placeholder {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  z-index: 1;
+  text-align: center;
+  padding: 0.3rem;
+}
+
+.about-gallery .g-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+/* ===== Where I'm headed — emphasis block ===== */
+.headed-block {
+  background: var(--dark-bg-elevated);
+  border: 1px solid var(--dark-line);
+  padding: 1.1rem 1.2rem;
+  margin: 0.8rem 0 1rem;
+  max-width: 100%;
+}
+
+.headed-block p {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  opacity: 0.92;
+  margin-bottom: 0.7rem;
+}
+
+.headed-block p:last-child {
+  margin-bottom: 0;
+}
+
+.headed-block strong {
+  color: var(--dark-teal-mid);
+  font-weight: 600;
+}
+
+/* ===== CTA footer for about ===== */
+.about-cta {
+  margin-top: 2rem;
+  padding: 1.2rem;
+  border: 1px solid var(--dark-text);
+  background: var(--dark-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: var(--dark-text);
+}
+
+.about-cta:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--dark-mustard);
+}
+
+.about-cta .cta-label {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.about-cta h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+
+.about-cta .arrow {
+  font-family: var(--font-mono);
+  color: var(--dark-mustard);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 480px) {
+  .about-gallery { grid-template-columns: repeat(2, 1fr); }
+}

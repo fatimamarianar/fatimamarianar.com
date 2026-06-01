@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAHD — IoT biometric attendance — Fatima Ramirez</title>
+<meta name="description" content="A rugged IoT fingerprint attendance device designed to survive vandalism — hardware and firmware by Fatima Ramirez.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,800;1,300;1,800&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/project.css">
+</head>
+
+<body class="theme-light" data-i18n-title="meta.title_cahd">
+
+<!-- Header strip -->
+<div class="header-strip">
+  <span class="dots">● ● ●</span>
+  <span class="center" data-i18n="header_strip.center">fatima_ramirez / portfolio.2026</span>
+  <span class="right" data-i18n="header_strip.right">v.01</span>
+</div>
+
+<!-- Navigation -->
+<nav class="nav" aria-label="Primary">
+  <ul>
+    <li><a href="index.html" data-i18n="nav.index">01 Index</a></li>
+    <li><a href="index.html#work" class="current" data-i18n="nav.work">02 Work</a></li>
+    <li><a href="about.html" data-i18n="nav.about">03 About</a></li>
+    <li><a href="index.html#contact" data-i18n="nav.contact">04 Contact</a></li>
+    <li class="lang-toggle" aria-label="Language toggle">
+      <button data-lang-btn="en" class="active" aria-pressed="true">EN</button>
+      <button data-lang-btn="es" aria-pressed="false">ES</button>
+    </li>
+  </ul>
+</nav>
+
+<main class="project-page">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html#work" data-i18n="cahd.breadcrumb_work">Work</a>
+    <span class="sep">/</span>
+    <span class="current" data-i18n="cahd.breadcrumb_current">CAHD</span>
+  </div>
+
+  <!-- Title block -->
+  <div class="tag-flag" data-i18n="cahd.tag">Project 03 · Trihton</div>
+
+  <h1 class="pp-title">
+    <span data-i18n="cahd.title_main">CAHD</span><br>
+    <em data-i18n="cahd.title_em">unbreakable attendance</em>
+  </h1>
+
+  <p class="pp-subtitle" data-i18n="cahd.subtitle">
+    Building hardware tough enough to outlast the people trying to break it.
+  </p>
+
+  <!-- Hero media -->
+  <div class="pp-hero-media">
+    <span class="corner-label" data-i18n="cahd.hero_corner">01 / Hero</span>
+    <div class="placeholder">
+      <span data-i18n="cahd.hero_placeholder">CAHD V4 DEVICE</span>
+      <span class="small" data-i18n="cahd.hero_placeholder_small">/assets/images/cahd-hero.jpg</span>
+    </div>
+  </div>
+
+  <!-- Spec sheet -->
+  <div class="pp-spec">
+    <div class="row">
+      <span class="k" data-i18n="cahd.spec_k_year">year</span>
+      <span class="v" data-i18n="cahd.spec_v_year">2019 – 2020</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="cahd.spec_k_role">role</span>
+      <span class="v" data-i18n="cahd.spec_v_role">Lead electronics & firmware · 5-person team (initial), 2 (final)</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="cahd.spec_k_team">team</span>
+      <span class="v" data-i18n="cahd.spec_v_team">Trihton owned all hardware + firmware; external vendor for cloud/UI</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="cahd.spec_k_stack">stack</span>
+      <span class="v" data-i18n="cahd.spec_v_stack">Dual ESP32 · PCB (EAGLE, 13 iterations) · C/C++ · WiFi/Ethernet/GPRS</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="cahd.spec_k_status">status</span>
+      <span class="v accent" data-i18n="cahd.spec_v_status">4 functional prototypes · paused before deployment</span>
+    </div>
+  </div>
+
+  <!-- ===== 01 CONTEXT ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="cahd.section_context_num">01</span> · <span data-i18n="cahd.section_context_label">Context</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="cahd.h3_context">Why this matters</h3>
+  <p class="pp-body" data-i18n="cahd.context_p1">
+    An investor approached us with a frustrating problem: schools in Nayarit, Mexico were trying to introduce attendance enforcement, but every device they installed kept getting destroyed. Conventional plastic-housed fingerprint scanners didn't survive in environments with active labor tensions.
+  </p>
+  <p class="pp-body" data-i18n="cahd.context_p2">
+    The brief was unusual: <strong>design hardware tough enough to outlast the people trying to break it</strong> — while still offering full IoT-grade functionality (remote enrollment, real-time alerts, cloud backup, OTA updates). Trihton owned the full physical and firmware side; a separate vendor handled the cloud platform and HR management UI.
+  </p>
+
+  <!-- ===== 02 APPROACH ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="cahd.section_approach_num">02</span> · <span data-i18n="cahd.section_approach_label">Approach</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="cahd.h3_approach">How I solved it</h3>
+  <p class="pp-body" data-i18n="cahd.approach_intro">
+    The device runs on <strong>two ESP32 microcontrollers</strong> in parallel: one handles user-facing tasks (touchscreen, fingerprint sensor, local logic), the other handles server communication and connectivity orchestration. This split kept the UX responsive while networking ran in the background — and gave a fallback path if one channel failed.
+  </p>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.5rem;" data-i18n="cahd.approach_h4_connectivity">Connectivity stack with intentional redundancy</h4>
+
+  <table class="pp-table">
+    <tr>
+      <th data-i18n="cahd.tbl_conn_1">WiFi (802.11n)</th>
+      <td data-i18n="cahd.tbl_conn_1_desc">Primary cloud sync.</td>
+    </tr>
+    <tr>
+      <th data-i18n="cahd.tbl_conn_2">Ethernet</th>
+      <td data-i18n="cahd.tbl_conn_2_desc">Wired fallback for unstable WiFi environments.</td>
+    </tr>
+    <tr>
+      <th data-i18n="cahd.tbl_conn_3">GPRS / 2G-3G</th>
+      <td data-i18n="cahd.tbl_conn_3_desc">Last-resort SMS alerts when internet fails.</td>
+    </tr>
+    <tr>
+      <th data-i18n="cahd.tbl_conn_4">SD card (16 GB)</th>
+      <td data-i18n="cahd.tbl_conn_4_desc">Local backup of attendance records when all channels fail.</td>
+    </tr>
+  </table>
+  <p class="pp-body" data-i18n="cahd.approach_conn_close">
+    The system spoke <strong>HTTP/JSON</strong> with the HR management server — bidirectional sync of users, fingerprints, and attendance logs.
+  </p>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.5rem;" data-i18n="cahd.approach_h4_domains">Multi-domain ownership</h4>
+
+  <table class="pp-table">
+    <tr>
+      <th data-i18n="cahd.tbl_dom_1">PCB design</th>
+      <td data-i18n="cahd.tbl_dom_1_desc">Mixed-signal board through 13 design iterations. Dual-input power (120/220 VAC mains + UPS battery, 3–4 hr backup); analog signal conditioning for the fingerprint sensor; multi-protocol routing (UART, SPI, I²C) for all peripherals.</td>
+    </tr>
+    <tr>
+      <th data-i18n="cahd.tbl_dom_2">EMC & form-factor</th>
+      <td data-i18n="cahd.tbl_dom_2_desc">The stainless-steel enclosure introduced severe RF reflection problems. Routed signals carefully, added shielding strategies, and laid out the board to minimize coupling inside a tightly confined metal cavity.</td>
+    </tr>
+    <tr>
+      <th data-i18n="cahd.tbl_dom_3">Firmware</th>
+      <td data-i18n="cahd.tbl_dom_3_desc">C/C++ on dual ESP32 — fingerprint enrollment/matching, touchscreen menu system, multi-channel networking with graceful degradation, SD logging, server sync, tamper alerts, OTA exploration.</td>
+    </tr>
+    <tr>
+      <th data-i18n="cahd.tbl_dom_4">System integration</th>
+      <td data-i18n="cahd.tbl_dom_4_desc">Coordinated with mechanical and industrial design colleagues on housing constraints (cable routing, vibration, polycarbonate window, solenoid lock for admin access).</td>
+    </tr>
+  </table>
+
+  <!-- Inverted diagram block -->
+  <div class="pp-diagram">
+    <div class="diagram-area">
+      <span class="placeholder" data-i18n="cahd.approach_diag_placeholder">DUAL-ESP32 + CONNECTIVITY STACK</span>
+    </div>
+    <div class="diagram-caption">
+      <span data-i18n="cahd.approach_diag_caption_left">fig.01 — UX controller + connectivity controller</span>
+      <span class="acc" data-i18n="cahd.approach_diag_caption_right">elec · firmware</span>
+    </div>
+  </div>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.5rem;" data-i18n="cahd.approach_h4_features">Designed-in for the environment</h4>
+  <ul class="pp-list">
+    <li data-i18n="cahd.approach_feat_li1">Replaceable fingerprint sensor without data loss — the most damage-prone component</li>
+    <li data-i18n="cahd.approach_feat_li2">Tamper detection — sensors for enclosure opening, screen access, and power disconnection, with WiFi + SMS alerts</li>
+    <li data-i18n="cahd.approach_feat_li3">Separated databases per device — workers can't bypass by using a different terminal</li>
+    <li data-i18n="cahd.approach_feat_li4">Differentiated housings — stainless steel for high-vandalism contexts, polycarbonate for normal offices</li>
+  </ul>
+
+  <!-- ===== 03 RESULT ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="cahd.section_result_num">03</span> · <span data-i18n="cahd.section_result_label">Result</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="cahd.h3_result">What it achieved</h3>
+
+  <!-- Callout -->
+  <div class="pp-result">
+    <div class="label" data-i18n="cahd.result_callout1_label">Reached</div>
+    <div class="stat" data-i18n="cahd.result_callout1_stat">V4 — production-ready prototype</div>
+    <div class="desc" data-i18n="cahd.result_callout1_desc">
+      4 full product iterations alongside 13 PCB revisions.
+    </div>
+  </div>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.4rem;" data-i18n="cahd.result_h4_specs">V4 specs</h4>
+  <ul class="pp-list">
+    <li data-i18n="cahd.result_spec_li1">499-user capacity, 998-fingerprint storage, 16 GB internal</li>
+    <li data-i18n="cahd.result_spec_li2">3.5" touchscreen, replaceable sensor module, IP53 rating</li>
+    <li data-i18n="cahd.result_spec_li3">120/220 VAC dual operation, 8W consumption (down from 24W)</li>
+    <li data-i18n="cahd.result_spec_li4">WiFi + Ethernet + GPRS with graceful failover, 4-hour battery backup</li>
+    <li data-i18n="cahd.result_spec_li5">Tamper detection with real-time WiFi + SMS alerts</li>
+  </ul>
+
+  <!-- Iteration diagram / gallery hint -->
+  <div class="pp-video">
+    <span class="vid-meta" data-i18n="cahd.result_video_meta">V1 → V4 · MP4</span>
+    <div class="play" aria-label="Play video"></div>
+  </div>
+  <p style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; margin-top: -0.5rem; margin-bottom: 1.2rem;" data-i18n="cahd.result_video_placeholder">
+    Device in operation — fingerprint check
+  </p>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.4rem;" data-i18n="cahd.result_h4_open">What remained open</h4>
+  <ul class="pp-list">
+    <li data-i18n="cahd.result_open_li1">OTA updates (architecture in place, not fully tested)</li>
+    <li data-i18n="cahd.result_open_li2">Ethernet reliability needed more field testing</li>
+    <li data-i18n="cahd.result_open_li3">Investor-requested facial-recognition camera was scoped but never integrated</li>
+    <li data-i18n="cahd.result_open_li4">Project paused when external funding stalled and the cloud vendor disengaged</li>
+  </ul>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.4rem;" data-i18n="cahd.result_h4_learned">What I took from it</h4>
+  <p class="pp-body" data-i18n="cahd.result_learned">
+    CAHD was my first multi-year, multi-iteration hardware product — and it taught me how much real engineering happens in the iterations <strong>after</strong> something already works. The leap from V3 (functional) to V4 (deployable) involved no new features, only relentless tightening: power budget cut by two-thirds, sensor module made hot-swappable, tamper detection refined, EMC issues hunted down one by one inside a metal cavity that fought me at every revision.
+  </p>
+
+  <!-- ===== 04 GALLERY ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="cahd.section_gallery_num">04</span> · <span data-i18n="cahd.section_gallery_label">Gallery</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="cahd.h3_gallery">Process & details</h3>
+
+  <div class="pp-gallery">
+    <div class="thumb thumb-a">
+      <span class="caption" data-i18n="cahd.gallery_a_caption">01 · Device</span>
+      <span class="placeholder" data-i18n="cahd.gallery_a_placeholder">V4 assembled</span>
+    </div>
+    <div class="thumb thumb-b">
+      <span class="caption" data-i18n="cahd.gallery_b_caption">02 · PCB</span>
+      <span class="placeholder" data-i18n="cahd.gallery_b_placeholder">Custom PCB</span>
+    </div>
+    <div class="thumb thumb-c">
+      <span class="caption" data-i18n="cahd.gallery_c_caption">03 · Iterations</span>
+      <span class="placeholder" data-i18n="cahd.gallery_c_placeholder">V1–V4 evolution</span>
+    </div>
+    <div class="thumb thumb-d">
+      <span class="caption" data-i18n="cahd.gallery_d_caption">04 · Screen</span>
+      <span class="placeholder" data-i18n="cahd.gallery_d_placeholder">Touch interface</span>
+    </div>
+  </div>
+
+  <!-- Next project -->
+  <a class="pp-nav-next" href="honey.html">
+    <span class="label" data-i18n="cahd.next_label">Next project →</span>
+    <h5 data-i18n="cahd.next_title">Honey packager</h5>
+    <span class="arrow">→</span>
+    <span style="grid-column: 1 / 2; font-family: var(--font-body); font-size: 0.95rem; opacity: 0.8;" data-i18n="cahd.next_sub">Semi-automatic honey packaging system</span>
+  </a>
+
+  <!-- Footer -->
+  <footer class="pp-footer">
+    <span data-i18n="cahd.footer_left">© 2026 Fatima Ramirez</span>
+    <a href="index.html" class="accent" style="text-decoration: none; color: inherit;" data-i18n="cahd.footer_right_back">Back to Index ↑</a>
+  </footer>
+</main>
+
+<script src="js/i18n.js"></script>
+</body>
+</html>

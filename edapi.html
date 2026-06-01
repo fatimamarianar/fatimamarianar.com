@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDAPI — Bee venom collection device — Fatima Ramirez</title>
+<meta name="description" content="A controlled-stimulation system for safe apitoxin harvesting in outdoor apiaries — hardware and firmware by Fatima Ramirez.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,800;1,300;1,800&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/project.css">
+</head>
+
+<body class="theme-light" data-i18n-title="meta.title_edapi">
+
+<!-- Header strip -->
+<div class="header-strip">
+  <span class="dots">● ● ●</span>
+  <span class="center" data-i18n="header_strip.center">fatima_ramirez / portfolio.2026</span>
+  <span class="right" data-i18n="header_strip.right">v.01</span>
+</div>
+
+<!-- Navigation -->
+<nav class="nav" aria-label="Primary">
+  <ul>
+    <li><a href="index.html" data-i18n="nav.index">01 Index</a></li>
+    <li><a href="index.html#work" class="current" data-i18n="nav.work">02 Work</a></li>
+    <li><a href="about.html" data-i18n="nav.about">03 About</a></li>
+    <li><a href="index.html#contact" data-i18n="nav.contact">04 Contact</a></li>
+    <li class="lang-toggle" aria-label="Language toggle">
+      <button data-lang-btn="en" class="active" aria-pressed="true">EN</button>
+      <button data-lang-btn="es" aria-pressed="false">ES</button>
+    </li>
+  </ul>
+</nav>
+
+<main class="project-page">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html#work" data-i18n="edapi.breadcrumb_work">Work</a>
+    <span class="sep">/</span>
+    <span class="current" data-i18n="edapi.breadcrumb_current">EDAPI</span>
+  </div>
+
+  <!-- Title block -->
+  <div class="tag-flag" data-i18n="edapi.tag">Project 02 · Trihton</div>
+
+  <h1 class="pp-title">
+    <span data-i18n="edapi.title_main">EDAPI</span><br>
+    <em data-i18n="edapi.title_em">bee venom collector</em>
+  </h1>
+
+  <p class="pp-subtitle" data-i18n="edapi.subtitle">
+    A controlled-stimulation system that gets bees to sting glass — safely.
+  </p>
+
+  <!-- Hero media -->
+  <div class="pp-hero-media">
+    <span class="corner-label" data-i18n="edapi.hero_corner">01 / Hero</span>
+    <div class="placeholder">
+      <span data-i18n="edapi.hero_placeholder">EDAPI COLLECTOR IN THE FIELD</span>
+      <span class="small" data-i18n="edapi.hero_placeholder_small">/assets/images/edapi-hero.jpg</span>
+    </div>
+  </div>
+
+  <!-- Spec sheet -->
+  <div class="pp-spec">
+    <div class="row">
+      <span class="k" data-i18n="edapi.spec_k_year">year</span>
+      <span class="v" data-i18n="edapi.spec_v_year">2019 – 2020</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="edapi.spec_k_role">role</span>
+      <span class="v" data-i18n="edapi.spec_v_role">Lead electronics & firmware · 2-person design team</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="edapi.spec_k_team">team</span>
+      <span class="v" data-i18n="edapi.spec_v_team">2 designers (electronics/firmware + mechanical), in collaboration</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="edapi.spec_k_stack">stack</span>
+      <span class="v" data-i18n="edapi.spec_v_stack">ESP32 · H-bridge driver · custom PCB (EAGLE) · C/C++</span>
+    </div>
+    <div class="row">
+      <span class="k" data-i18n="edapi.spec_k_status">status</span>
+      <span class="v accent" data-i18n="edapi.spec_v_status">Deployed · 2 systems in active use · repeat order 2024</span>
+    </div>
+  </div>
+
+  <!-- ===== 01 CONTEXT ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="edapi.section_context_num">01</span> · <span data-i18n="edapi.section_context_label">Context</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="edapi.h3_context">Why this matters</h3>
+  <p class="pp-body" data-i18n="edapi.context_p1">
+    A beekeeper learned from his daughters — biology students — that bee venom (apitoxin) is being studied as a treatment for rheumatoid arthritis. He wanted to expand his apiary business into apitoxin harvesting, but couldn't find affordable collection equipment. Commercial alternatives were scarce, expensive, and not designed for field conditions.
+  </p>
+  <p class="pp-body" data-i18n="edapi.context_p2">
+    He approached us through a personal connection with one of Trihton's co-founders. The challenge was three-fold:
+  </p>
+  <ul class="pp-list">
+    <li data-i18n="edapi.context_li1">Get bees to sting on demand, into a controlled surface, without harming them</li>
+    <li data-i18n="edapi.context_li2">Survive the field — outdoor apiaries with no power infrastructure, rough handling, dust</li>
+    <li data-i18n="edapi.context_li3">Be affordable enough for an independent beekeeper, not a pharma lab</li>
+  </ul>
+
+  <!-- ===== 02 APPROACH ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="edapi.section_approach_num">02</span> · <span data-i18n="edapi.section_approach_label">Approach</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="edapi.h3_approach">How I solved it</h3>
+  <p class="pp-body" data-i18n="edapi.approach_intro">
+    The first iteration tried self-contained collectors — each with its own signal generator. It worked but was expensive and complex. We pivoted to a centralized architecture: one "brain" unit generates the stimulation signals and manages power, while up to 20 slave collectors connect to it in parallel via RCA cables. The slaves carry no electronics — they're rugged, replaceable, and low-cost.
+  </p>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.5rem;" data-i18n="edapi.approach_h4_domains">Multi-domain ownership</h4>
+
+  <table class="pp-table">
+    <tr>
+      <th data-i18n="edapi.tbl_dom_1">Electronics</th>
+      <td data-i18n="edapi.tbl_dom_1_desc">Custom PCB integrating H-bridge signal generation, power management, ESP32 controller, and an output selector for DC vs. square-wave bipolar output.</td>
+    </tr>
+    <tr>
+      <th data-i18n="edapi.tbl_dom_2">Firmware</th>
+      <td data-i18n="edapi.tbl_dom_2_desc">C/C++ on ESP32 — signal pattern generation with configurable frequency, amplitude, and duty cycle; activation cycles tuned to research-backed safety limits.</td>
+    </tr>
+    <tr>
+      <th data-i18n="edapi.tbl_dom_3">Field-ready power</th>
+      <td data-i18n="edapi.tbl_dom_3_desc">Dual power input (internal 12V lead-acid battery + external automotive battery via alligator clips); ~7 h autonomy at full load (20 collectors); rugged RCA + BNC connectors.</td>
+    </tr>
+    <tr>
+      <th data-i18n="edapi.tbl_dom_4">Signal research</th>
+      <td data-i18n="edapi.tbl_dom_4_desc">Reviewed existing devices (some at up to 33V); ran field tests to find the safe envelope. Settled on 9–12V output, ≤10 min activation cycles — minimizing bee mortality while maintaining stimulation.</td>
+    </tr>
+  </table>
+
+  <!-- Inverted diagram block -->
+  <div class="pp-diagram">
+    <div class="diagram-area">
+      <span class="placeholder" data-i18n="edapi.approach_diag_placeholder">BRAIN + SLAVE ARCHITECTURE</span>
+    </div>
+    <div class="diagram-caption">
+      <span data-i18n="edapi.approach_diag_caption_left">fig.01 — one brain, up to 20 parallel collectors</span>
+      <span class="acc" data-i18n="edapi.approach_diag_caption_right">elec · firmware</span>
+    </div>
+  </div>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.5rem;" data-i18n="edapi.approach_h4_insight">Key technical insight</h4>
+  <p class="pp-body" data-i18n="edapi.approach_insight">
+    Existing devices used DC signals. In our field tests, we discovered that <strong>square-wave bipolar signals</strong> (alternating polarity) provoked stronger, more localized stinging — bees seemed disoriented by the alternating field and stung more actively at the collection surface. This became the dominant operating mode of the final product.
+  </p>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.5rem;" data-i18n="edapi.approach_h4_iteration">Iteration discipline</h4>
+  <p class="pp-body" data-i18n="edapi.approach_iteration">
+    Three iterations, each driven by direct field testing with the beekeeper:
+  </p>
+  <ul class="pp-list">
+    <li data-i18n="edapi.approach_iter_li1">Standalone collectors → too expensive</li>
+    <li data-i18n="edapi.approach_iter_li2">Centralized brain + simple slaves → working but fragile</li>
+    <li data-i18n="edapi.approach_iter_li3">Rugged outdoor-grade version → battery upgrades, robust cabling, reliability fixes</li>
+  </ul>
+  <p class="pp-body" data-i18n="edapi.approach_iteration_close">
+    Every iteration involved on-site testing alongside the client, whose decades of beekeeping experience interpreted the bees' behavior in ways no datasheet could.
+  </p>
+
+  <!-- ===== 03 RESULT ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="edapi.section_result_num">03</span> · <span data-i18n="edapi.section_result_label">Result</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="edapi.h3_result">What it achieved</h3>
+
+  <!-- Callout 1 -->
+  <div class="pp-result">
+    <div class="label" data-i18n="edapi.result_callout1_label">Delivered & in use</div>
+    <div class="stat" data-i18n="edapi.result_callout1_stat">2 complete systems</div>
+    <div class="desc" data-i18n="edapi.result_callout1_desc">
+      Each with 1 brain + 15–20 slave collectors. In active use since 2020.
+    </div>
+  </div>
+
+  <!-- Callout 2 -->
+  <div class="pp-result">
+    <div class="label" data-i18n="edapi.result_callout2_label">Strongest validation</div>
+    <div class="stat" data-i18n="edapi.result_callout2_stat">Repeat order in 2024</div>
+    <div class="desc" data-i18n="edapi.result_callout2_desc">
+      The client came back for another full system — the clearest signal the product works.
+    </div>
+  </div>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.4rem;" data-i18n="edapi.result_h4_specs">Final specs</h4>
+  <ul class="pp-list">
+    <li data-i18n="edapi.result_spec_li1">Brain: 100 mA · 12V DC input · 8.5 Vrms square-wave bipolar output</li>
+    <li data-i18n="edapi.result_spec_li2">Slaves: 165 mA at full load · pine/cedar wood + resin housing</li>
+    <li data-i18n="edapi.result_spec_li3">Operating envelope: 9–12V, ≤10 min activation cycles</li>
+    <li data-i18n="edapi.result_spec_li4">Battery: 7 h autonomy at full load · rugged case 40 × 40 × 91 cm</li>
+  </ul>
+
+  <!-- Video placeholder -->
+  <div class="pp-video">
+    <span class="vid-meta" data-i18n="edapi.result_video_meta">FIELD · MP4</span>
+    <div class="play" aria-label="Play video"></div>
+  </div>
+  <p style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; margin-top: -0.5rem; margin-bottom: 1.2rem;" data-i18n="edapi.result_video_placeholder">
+    Video — EDAPI collecting venom in the field
+  </p>
+
+  <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.4rem;" data-i18n="edapi.result_h4_learned">What I took from it</h4>
+  <p class="pp-body" data-i18n="edapi.result_learned">
+    EDAPI taught me that engineering decisions in field-deployed hardware are not just technical — they're collaborative. The single most valuable design choice (bipolar signaling) came from observing real bees in the field, not from a datasheet. Working directly with the end user changed how I think about specification gathering for every project since.
+  </p>
+
+  <!-- ===== 04 GALLERY ===== -->
+  <div class="pp-section">
+    <span><span class="num" data-i18n="edapi.section_gallery_num">04</span> · <span data-i18n="edapi.section_gallery_label">Gallery</span></span>
+  </div>
+  <h3 class="pp-h3" data-i18n="edapi.h3_gallery">Process & details</h3>
+
+  <div class="pp-gallery">
+    <div class="thumb thumb-a">
+      <span class="caption" data-i18n="edapi.gallery_a_caption">01 · Brain</span>
+      <span class="placeholder" data-i18n="edapi.gallery_a_placeholder">Central unit</span>
+    </div>
+    <div class="thumb thumb-b">
+      <span class="caption" data-i18n="edapi.gallery_b_caption">02 · PCB</span>
+      <span class="placeholder" data-i18n="edapi.gallery_b_placeholder">Custom PCB</span>
+    </div>
+    <div class="thumb thumb-c">
+      <span class="caption" data-i18n="edapi.gallery_c_caption">03 · Collectors</span>
+      <span class="placeholder" data-i18n="edapi.gallery_c_placeholder">Slave units</span>
+    </div>
+    <div class="thumb thumb-d">
+      <span class="caption" data-i18n="edapi.gallery_d_caption">04 · Field</span>
+      <span class="placeholder" data-i18n="edapi.gallery_d_placeholder">In operation</span>
+    </div>
+  </div>
+
+  <!-- Next project -->
+  <a class="pp-nav-next" href="cahd.html">
+    <span class="label" data-i18n="edapi.next_label">Next project →</span>
+    <h5 data-i18n="edapi.next_title">CAHD</h5>
+    <span class="arrow">→</span>
+    <span style="grid-column: 1 / 2; font-family: var(--font-body); font-size: 0.95rem; opacity: 0.8;" data-i18n="edapi.next_sub">Unbreakable IoT biometric attendance</span>
+  </a>
+
+  <!-- Footer -->
+  <footer class="pp-footer">
+    <span data-i18n="edapi.footer_left">© 2026 Fatima Ramirez</span>
+    <a href="index.html" class="accent" style="text-decoration: none; color: inherit;" data-i18n="edapi.footer_right_back">Back to Index ↑</a>
+  </footer>
+</main>
+
+<script src="js/i18n.js"></script>
+</body>
+</html>
