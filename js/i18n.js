@@ -29,7 +29,7 @@
       const key = el.getAttribute('data-i18n');
       const value = resolveKey(dict, key);
       if (value !== null && value !== undefined) {
-        el.textContent = value;
+        el.innerHTML = value;
       }
     });
 

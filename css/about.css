@@ -115,7 +115,7 @@
   opacity: 0.92;
 }
 
-.motivation p strong {
+.motivation .m-strong {
   color: var(--dark-teal-mid);
   font-weight: 600;
 }
@@ -277,4 +277,9 @@
 
 @media (max-width: 480px) {
   .about-gallery { grid-template-columns: repeat(2, 1fr); }
+  .home-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
 }
