@@ -64,11 +64,12 @@
 
   <!-- Hero media -->
   <div class="pp-hero-media">
-    <span class="corner-label" data-i18n="auger.hero_corner">01 / Hero</span>
-    <div class="placeholder">
+    <span class="corner-label" data-i18n="auger.hero_corner">Printhead physical prototype</span>
+    <img src="assets/media/auger_hero.jpg" alt="Overall auger extruder assembled on the printer">
+    <!-- <div class="placeholder">
       <span data-i18n="auger.hero_placeholder">PRINTHEAD ASSEMBLED ON GANTRY</span>
       <span class="small" data-i18n="auger.hero_placeholder_small">/assets/images/auger-hero.jpg</span>
-    </div>
+    </div> -->
   </div>
 
   <!-- Spec sheet -->
@@ -155,12 +156,15 @@
   <!-- Inverted diagram block (dark inside light page) -->
   <div class="pp-diagram">
     <div class="diagram-area">
-      <span class="placeholder" data-i18n="auger.approach_diag_placeholder">ARCHITECTURE DIAGRAM</span>
+      <!-- <span class="placeholder" data-i18n="auger.approach_diag_placeholder">ARCHITECTURE DIAGRAM</span> -->
+      <img src="assets/media/auger_diagram.jpg" alt="Architecture diagram of the printhead">
     </div>
     <div class="diagram-caption">
-      <span data-i18n="auger.approach_diag_caption_left">fig.01 — auger printhead system</span>
-      <span class="acc" data-i18n="auger.approach_diag_caption_right">mech · elec · firmware</span>
+      <span data-i18n="auger.approach_diag_caption_left">auger printhead system</span>
+      <span class="acc" data-i18n="auger.approach_diag_caption_right">mech · elec </span>
+      
     </div>
+    
   </div>
 
   <h4 class="pp-h3" style="font-size: 1.1rem; margin-top: 1.5rem;" data-i18n="auger.approach_h4_tradeoffs">Key trade-offs evaluated</h4>
@@ -205,9 +209,15 @@
 
   <!-- Video placeholder -->
   <div class="pp-video">
-    <span class="vid-meta" data-i18n="auger.result_video_meta">01:24 · MP4</span>
-    <div class="play" aria-label="Play video"></div>
+    <span class="vid-meta" data-i18n="auger.result_video_meta">00:37 · MP4</span>
+    <video class="pp-video" controls poster="assets/media/auger_video_poster.jpg">
+      <source src="assets/media/auger_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- <div class="play" aria-label="Play video"></div> -->
   </div>
+
+
   <p style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; margin-top: -0.5rem; margin-bottom: 1.2rem;" data-i18n="auger.result_video_placeholder">
     Video — Printhead extruding mortar mix
   </p>
@@ -234,21 +244,20 @@
   <h3 class="pp-h3" data-i18n="auger.h3_gallery">Process & details</h3>
 
   <div class="pp-gallery">
-    <div class="thumb thumb-a">
-      <span class="caption" data-i18n="auger.gallery_a_caption">01 · CAD</span>
-      <span class="placeholder" data-i18n="auger.gallery_a_placeholder">CAD render</span>
+    <div class="thumb">
+      <span class="caption" data-i18n="auger.gallery_a_caption">01 · PCB</span>
+      <img src="assets/media/auger_pcb.jpg" alt="Manufactured cutom PCB for DIDO handling">
+      <!-- <span class="placeholder" data-i18n="auger.gallery_b_placeholder">Custom PCB</span> -->
     </div>
-    <div class="thumb thumb-b">
-      <span class="caption" data-i18n="auger.gallery_b_caption">02 · PCB</span>
-      <span class="placeholder" data-i18n="auger.gallery_b_placeholder">Custom PCB</span>
+    <div class="thumb">
+      <span class="caption" data-i18n="auger.gallery_b_caption">02 · OPERATION</span>
+      <img src="assets/media/auger_operation.jpg" alt="Operating printhead during material tests ">
+      <!-- <span class="placeholder" data-i18n="auger.gallery_a_placeholder">CAD render</span> -->
     </div>
-    <div class="thumb thumb-c">
-      <span class="caption" data-i18n="auger.gallery_c_caption">03 · Setup</span>
-      <span class="placeholder" data-i18n="auger.gallery_c_placeholder">Lab setup</span>
-    </div>
-    <div class="thumb thumb-d">
-      <span class="caption" data-i18n="auger.gallery_d_caption">04 · Output</span>
-      <span class="placeholder" data-i18n="auger.gallery_d_placeholder">Printed lines</span>
+    <div class="thumb wide">
+      <span class="caption" data-i18n="auger.gallery_c_caption">03 · Hardened material removal</span>
+      <img src="assets/media/auger_material_removal.jpg" alt="Removing hardened mateerial from printhead interior ">
+      <!-- <span class="placeholder" data-i18n="auger.gallery_c_placeholder">Lab setup</span> -->
     </div>
   </div>
 
