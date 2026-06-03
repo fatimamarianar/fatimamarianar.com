@@ -129,6 +129,7 @@
   padding: 0.2rem 0.4rem;
   letter-spacing: 0.1em;
   z-index: 2;
+  text-transform: uppercase;
 }
 
 .pp-hero-media img {
@@ -410,10 +411,16 @@
   z-index: 2;
 }
 
+.pp-video iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 /* ===== Hide decorative grid if images is added ===== */
 .pp-hero-media:has(img)::after,
 .pp-gallery .thumb:has(img)::after,
-.pp-video:has(img, video)::after {
+.pp-video:has(img, video, iframe)::after {
   display: none;
 }
 
