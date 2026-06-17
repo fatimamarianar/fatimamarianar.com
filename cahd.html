@@ -64,10 +64,11 @@
   <!-- Hero media -->
   <div class="pp-hero-media">
     <span class="corner-label" data-i18n="cahd.hero_corner">01 / Hero</span>
-    <div class="placeholder">
+    <img src="assets/media/cahd_hero.png" alt="Overall auger extruder assembled on the printer">
+    <!-- <div class="placeholder">
       <span data-i18n="cahd.hero_placeholder">CAHD V4 DEVICE</span>
       <span class="small" data-i18n="cahd.hero_placeholder_small">/assets/images/cahd-hero.jpg</span>
-    </div>
+    </div> -->
   </div>
 
   <!-- Spec sheet -->
@@ -163,7 +164,8 @@
   <!-- Inverted diagram block -->
   <div class="pp-diagram">
     <div class="diagram-area">
-      <span class="placeholder" data-i18n="cahd.approach_diag_placeholder">DUAL-ESP32 + CONNECTIVITY STACK</span>
+      <!-- <span class="placeholder" data-i18n="cahd.approach_diag_placeholder">DUAL-ESP32 + CONNECTIVITY STACK</span> -->
+      <img src="assets/media/cahd_diagram.jpg" alt="Architecture diagram of the IoT Attendace Device CAHD">
     </div>
     <div class="diagram-caption">
       <span data-i18n="cahd.approach_diag_caption_left">fig.01 — UX controller + connectivity controller</span>
@@ -205,8 +207,15 @@
 
   <!-- Iteration diagram / gallery hint -->
   <div class="pp-video">
-    <span class="vid-meta" data-i18n="cahd.result_video_meta">V1 → V4 · MP4</span>
-    <div class="play" aria-label="Play video"></div>
+    <span class="vid-meta" data-i18n="cahd.result_video_meta">01:28 · MP4</span>
+    <iframe
+      src="https://www.youtube.com/embed/bkmtWujphyM?modestbranding=1&rel=0&vq=hd720"
+      title="IoT attendance device demo"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+      allowfullscreen>
+    </iframe>
+    <!-- <div class="play" aria-label="Play video"></div> -->
   </div>
   <p style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; margin-top: -0.5rem; margin-bottom: 1.2rem;" data-i18n="cahd.result_video_placeholder">
     Device in operation — fingerprint check
@@ -232,21 +241,49 @@
   <h3 class="pp-h3" data-i18n="cahd.h3_gallery">Process & details</h3>
 
   <div class="pp-gallery">
-    <div class="thumb thumb-a">
-      <span class="caption" data-i18n="cahd.gallery_a_caption">01 · Device</span>
-      <span class="placeholder" data-i18n="cahd.gallery_a_placeholder">V4 assembled</span>
+    <div class="thumb">
+      <span class="caption" data-i18n="cahd.gallery_a_caption">01 · CAHD V3</span>
+      <img src="assets/media/cahd_v3.jpg" alt="Last functional prototype: CAHD V3">
+      <!-- <span class="placeholder" data-i18n="cahd.gallery_a_placeholder">V4 assembled</span> -->
     </div>
-    <div class="thumb thumb-b">
-      <span class="caption" data-i18n="cahd.gallery_b_caption">02 · PCB</span>
-      <span class="placeholder" data-i18n="cahd.gallery_b_placeholder">Custom PCB</span>
+    <div class="thumb">
+      <span class="caption" data-i18n="cahd.gallery_b_caption">02 · Internal integration</span>
+      <img src="assets/media/cahd_v3_internal.jpg" alt="Prototype Internal Integration: CAHD V3">
+      <!-- <span class="placeholder" data-i18n="cahd.gallery_b_placeholder">Custom PCB</span> -->
     </div>
-    <div class="thumb thumb-c">
-      <span class="caption" data-i18n="cahd.gallery_c_caption">03 · Iterations</span>
-      <span class="placeholder" data-i18n="cahd.gallery_c_placeholder">V1–V4 evolution</span>
+    <div class="thumb wide">
+      <span class="caption" data-i18n="cahd.gallery_c_caption">03 · Exploded</span>
+      <img src="assets/media/cahd_v3_exploded.jpg" alt="Prototype Internal Integration Exploded: CAHD V3">
+      <!-- <span class="placeholder" data-i18n="cahd.gallery_c_placeholder">V1–V4 evolution</span> -->
     </div>
-    <div class="thumb thumb-d">
-      <span class="caption" data-i18n="cahd.gallery_d_caption">04 · Screen</span>
-      <span class="placeholder" data-i18n="cahd.gallery_d_placeholder">Touch interface</span>
+    <div class="thumb">
+      <span class="caption" data-i18n="cahd.gallery_d_caption">04 · Conceptual test</span>
+      <img src="assets/media/cahd_concept_test1.jpg" alt="First conceptual test">
+      <!-- <span class="placeholder" data-i18n="cahd.gallery_d_placeholder">Touch interface</span> -->
+    </div>
+    <div class="thumb">
+      <span class="caption" data-i18n="cahd.gallery_d_caption">05 · Conceptual test</span>
+      <img src="assets/media/cahd_concept_test2.jpg" alt="Second conceptual test">
+    </div>
+    <div class="thumb">
+      <span class="caption" data-i18n="cahd.gallery_d_caption">06 · CAHD V1</span>
+      <img src="assets/media/cahd_v1.jpg" alt="CAHD V1 prototype">
+    </div>
+    <div class="thumb">
+      <span class="caption" data-i18n="cahd.gallery_d_caption">07 · CAHD V2</span>
+      <img src="assets/media/cahd_v2.jpg" alt="CAHD V2 prototype">
+    </div>
+    <div class="thumb">
+      <span class="caption" data-i18n="cahd.gallery_d_caption">08 · PCB V1</span>
+      <img src="assets/media/cahd_pcbv1.jpg" alt="PCB design 4th iteration">
+    </div>
+    <div class="thumb tall">
+      <span class="caption" data-i18n="cahd.gallery_d_caption">09 · PCB V10</span>
+      <img src="assets/media/cahd_pcbv10.jpg" alt="PCB design 4th iteration">
+    </div>
+    <div class="thumb">
+      <span class="caption" data-i18n="cahd.gallery_d_caption">10 · PCB V4</span>
+      <img src="assets/media/cahd_pcbv4.jpg" alt="PCB design 4th iteration">
     </div>
   </div>
 

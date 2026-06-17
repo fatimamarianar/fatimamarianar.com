@@ -163,6 +163,10 @@
   inset: 0;
 }
 
+.pc-thumb:has(img, video, iframe)::after {
+  display: none;
+}
+
 .pc-body {
   padding: 0.8rem 0.9rem;
 }
